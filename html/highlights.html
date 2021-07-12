@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://e-cdns-files.dzcdn.net/cache/images/common/favicon/favicon.a6a53d55264841165a904dbea19d5d73.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/favorites-style.css">
+    <title>Playlists</title>
+
+</head>
+<body iid="body">
+
+    <div id='page-topbar'>
+        <form action="" id='search-form'>
+            <button id='topbar-search'>
+                <svg class="svg-icon svg-icon-search topbar-search-icon" focusable="false" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.827 8.584l1.95 1.951a.879.879 0 0 1-1.242 1.242l-1.95-1.95c-2.137 1.55-5.12 1.383-7.02-.517-2.108-2.108-2.083-5.55.055-7.69C3.76-.518 7.202-.543 9.31 1.565c1.9 1.9 2.067 4.883.517 7.02zm-1.256-.013c1.721-1.72 1.741-4.49.045-6.187C6.92.688 4.15.708 2.429 2.43.708 4.149.688 6.919 2.384 8.616c1.696 1.696 4.466 1.676 6.187-.045z"></path></svg>
+            </button>
+            <input type="search" placeholder='Buscar' id="search-input" oninput="showCloseButton()">
+            <button id='search-clear'> 
+                <svg class="svg-icon svg-icon-cancel topbar-search-icon" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></button>
+        </form>
+
+        <div id='topbar-nav'>
+            
+            <div id='topbar-notifications'>
+                <button id='notifications-icon' onclick="showNotifications()">
+                    <svg class="svg-icon svg-icon-bell" focusable="false" height="20" width="20" viewBox="0 0 12 12" aria-hidden="true"><path d="M6.003 0C6.513 0 7.029 0 7 1c1.569.196 2.992 1.677 3 3.5.009 1.957.16 3.293.856 3.854.091.073.144.183.144.3v.961a.385.385 0 0 1-.385.385h-9.23A.385.385 0 0 1 1 9.615v-.961c0-.117.053-.227.144-.3.697-.56.847-1.897.856-3.854.009-1.99 1.23-3.342 2.999-3.5-.015-1 .494-1 1.004-1zM5 11.328L8 11l-.175.283c-.29.472-.733.717-1.305.717-.55 0-.982-.144-1.28-.437L5 11.328z"></path></svg>
+                    <span id='notifications-icon-number'>7</span>
+                </button>
+
+                <div id='notifications-content'>
+                    <h2 id='notifications-title'>Notificações</h2>
+                    <div id='notifications-container'>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/playlist/album6.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>Saudade</a>
+                                    <p class='notifications-artist-name'>Alceu Valença
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='notifications-date'>
+                                <p class='date-info'>38 minutos atrás - Novo Single</p>
+                            </div>
+                        </div>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/playlist/album1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>Reach Out/Olympus</a>
+                                    <p class='notifications-artist-name'>Sufjan Stevens, Angelo De Augustine
+                                    </p>
+                                </div>
+                            </div>
+                                <div class='notifications-date'>
+                                    <p class='date-info'>22 minutos atrás - Novo Single</p>
+                            </div>
+                        </div>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/playlist/album2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>Susie Cincinnati/Big Sur</a>
+                                    <p class='notifications-artist-name'>The Beach Boys
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='notifications-date'>
+                                <p class='date-info'>1 semana atrás - Novo Single</p>
+                            </div>
+                        </div>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/playlist/album4.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>CALL ME IF YOU GET LOST</a>
+                                    <p class='notifications-artist-name'>Tyler, The Creator
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='notifications-date'>
+                                <p class='date-info'>1 semana atrás - Novo Álbum</p>
+                            </div>
+                        </div>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/playlist/album3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>Come Gather 'Round</a>
+                                    <p class='notifications-artist-name'>Feng Suave
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='notifications-date'>
+                                <p class='date-info'>1 semana atrás - Novo Álbum</p>
+                            </div>
+                        </div>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/playlist/album5.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>The Jackie</a>
+                                    <p class='notifications-artist-name'>Bas, J. Cole, Lil Tjay
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='notifications-date'>
+                                <p class='date-info'>2 semanas atrás - Novo Álbum</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id='topbar-profile'>
+                <button id='profile-icon' onclick='showProfile()'>
+                    <img src="../img/user.jpg" alt="" id='topbar-profile-pic'>
+                </button>
+
+                <div id='profile-navigation'>
+                    <div id='profile-header'>
+                        <div href='' id='header-user'>
+                            <img src="../img/user-40x40.jpg" alt="" id='profile-header-img'>
+                            <p id='profile-user'>username</p>
+                        </div>
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                    </div>
+
+                    <ul id='profile-options'>
+                        <!------ACCOUNT ITEMS------->
+                        <div id='account-info-container'>
+                            <li class='account-item'>
+                                <span class='item-text'>Membros da família</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='account-item'>
+                                <span class='item-text'>Configurações</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='account-item'>
+                                <span class='item-text'>Gerenciar minhas exclusões</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='account-item'>
+                                <span class='item-text'>Desconectar</span>
+                            </li>
+                        </div>
+                        <!----MODES----->
+
+                        <li id='kids-mode' class='account-input'>
+                            <span class='input-text'>Ativar Deezer Kids</span>
+                            <div class='input-container'>
+                                <label for="kids-activate" class='label-input' id="kids-activate" onclick="activateKidsMode()"><input type="checkbox" id="kids-activate-input" class='account-input-input' value>
+                                </label>
+                            </div>
+                        </li>
+                        <li id='night-mode' class='account-input'>
+                            <span class='input-text'>Ativar Modo Noturno</span>
+                            <div class='input-container'>
+                                <label for="night-activate" class='label-input' id="night-activate" onclick="activateNightMode()">    
+                                    <input type="checkbox"  class='account-input-input' id="night-activate-input" value>
+                                </label>
+                            </div>
+                        </li>
+
+                        <!------DEEZER INFO------>
+                        <div id='deezer-info-container'>
+                            <li class='deezer-info' id='deezer-info'>
+                                <span class='deezer-info-item'>Deezer Labs</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='deezer-info'>
+                                <span class='deezer-info-item'>Ajuda</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='deezer-info'>
+                                <span class='deezer-info-item'>Rescursos</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='deezer-info'>
+                                <span class='deezer-info-item'>Sobre nós</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='deezer-info' id='deezer-info'>
+                                <span class='deezer-info-item'>Jobs</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='deezer-info' id='deezer-info'>
+                                <span class='deezer-info-item'>Legal</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                        </div>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id='page-sidebar'>
+        <div id='sidebar-header'>
+            <a href="#"><img src="../img/deezer-logo.png" alt="deezer-logo"></a>
+        </div>
+
+        <ul id='sidebar-content'>
+            <li class='sidebar-item sidebar-li'>
+                <a href="#" class='sidebar-link'><svg class="svg-icon" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="M9 7.834V4.858l11-1.692v2.976L9 7.834zm11-.68L9 8.846V19c0 1.657-1.567 3-3.5 3S2 20.657 2 19s1.567-3 3.5-3c.98 0 1.865.345 2.5.9V4l12-1.846L21 2v15c0 1.657-1.567 3-3.5 3S14 18.657 14 17s1.567-3 3.5-3c.98 0 1.865.345 2.5.9V7.154zM17.5 15c1.53 0 2.5 1.035 2.5 2 0 .965-.97 2-2.5 2S15 17.965 15 17c0-.965.97-2 2.5-2zM8 19c0-.965-.97-2-2.5-2S3 18.035 3 19c0 .965.97 2 2.5 2S8 19.965 8 19z"></path></svg> <span class='sidebar-text'>Música</span></a>
+            </li>
+            <li class='sidebar-item sidebar-li'>
+                <a href="#" class='sidebar-link'><svg class="svg-icon" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="M16 6a4 4 0 1 0-8 0h2.5a.5.5 0 0 1 0 1H8v1h2.5a.5.5 0 0 1 0 1H8v1h2.5a.5.5 0 0 1 0 1H8v1a4 4 0 0 0 8 0V6zm-4-5a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V6a5 5 0 0 0-5-5zM5 12H4a8 8 0 0 0 7.5 7.985V22H9v1h6v-1h-2.5v-2.015A8 8 0 0 0 20 12h-1a7 7 0 1 1-14 0z"></path></svg><span>Podcasts</span></a>
+            </li>
+            <li class='sidebar-item sidebar-li'>
+                <a href="#" class='sidebar-link'><svg class="svg-icon" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="M10 3 4.75 6H21a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7a1 1 0 0 1 .52-.878l6.984-3.99L10 3zM3 19V7h18v12H3zm16-8h-4v1h4v-1zm-4 3h4v1h-4v-1zm-3-1a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm1 0a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"></path></svg><span class='sidebar-text'>Rádios</span></a>
+            </li>
+            <li class='sidebar-item sidebar-li'>
+                <a href="#" class='sidebar-link'><svg class="svg-icon" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="M4 6h6.1v4H4V6zM3 6a1 1 0 0 1 1-1h6.1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6zm10.9 0H20v4h-6.1V6zm-1 0a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-6.1a1 1 0 0 1-1-1V6zm-2.8 8H4v4h6.1v-4zM4 13a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6.1a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4zm9.9 1H20v4h-6.1v-4zm-1 0a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-6.1a1 1 0 0 1-1-1v-4z"></path></svg><span class='sidebar-text'>Explorar</span></a>
+            </li>
+            <li class='sidebar-item sidebar-li'>
+                <a href="#" class='sidebar-link'><svg class="svg-icon" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="m12 7.463-.764-.905c-1.497-1.773-2.903-2.437-4.028-2.53-1.117-.092-2.127.363-2.893 1.18-1.573 1.676-1.948 4.666.066 6.761a301.42 301.42 0 0 0 5.974 6.047c.692.68 1.249 1.22 1.645 1.601.396-.381.953-.921 1.645-1.6a301.444 301.444 0 0 0 5.97-6.044 4.963 4.963 0 0 0 .072-6.8c-.763-.809-1.771-1.258-2.89-1.16-1.127.1-2.535.77-4.033 2.545L12 7.463zM12 21s-3.475-3.276-8.34-8.338C-1.034 7.778 5.087-1.08 11.32 5.17c.226.227.453.474.68.743a12.9 12.9 0 0 1 .68-.744c6.233-6.256 12.354 2.513 7.66 7.493C15.475 17.724 12 21 12 21z"></path></svg><span class='sidebar-text'>Favoritos</span></a>
+            </li>
+
+            <li class='favorites-item sidebar-li'>
+                <a href="favorites.html" class='sidebar-link'><span>Mais queridas</span></a>
+            </li>
+            <li class='favorites-item sidebar-li'>
+                <a href="playlist.html" class='sidebar-link'><span>Playlists</span></a>
+            </li>
+            <li class='favorites-item sidebar-li'>
+                <a href="albuns.html" class='sidebar-link'><span>Álbuns</span></a>
+            </li>
+            <li class='favorites-item sidebar-li'>
+                <a href="artists.html" class='sidebar-link'><span>Artistas</span></a>
+            </li>
+            <li class='favorites-item sidebar-li'>
+                <a href="podcasts.html" class='sidebar-link'><span>Podcasts</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div id='user-header'>
+        <div id='header-user-info'>
+            <img src="../img/user.jpg" alt="" id='header-user-pic'>
+            <div id='header-user-content'>
+                <h2 id='header-title'>monivrgs</h2>
+                    <ul id='follows'>
+                        <li class='follows-item' id='followers'>1 seguidor</li>
+                        <li class='follows-item' id='following'>1 seguindo</li>
+                    </ul>
+                <div id='header-random-button'>
+                    <button id='header-random'>
+                    <span><svg class="svg-icon svg-icon-shuffle" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.333 9.214h-.666C6.826 9.214 5.333 7.775 5.333 6c0-1.066-.894-1.929-2-1.929H.683C.298 4.071 0 3.784 0 3.43c0-.356.298-.643.667-.729.137 0 2.65.01 2.666 0 1.841.086 3.334 1.525 3.334 3.3 0 1.065.896 1.929 2 1.929h3c.185 0 .333.143.333.321v.321L9.333 10.5V9.214zm-.666-5.143c-.367 0-.708.103-1.004.27a4.497 4.497 0 0 0-.672-1.104c.493-.28 1.062-.451 1.709-.537.013.03.51 0 .6 0V1.5L12 3.429v.321a.327.327 0 0 1-.333.321h-3zM3.333 7.93c.369 0 .709-.103 1.004-.27.168.404.4.767.672 1.104-.493.28-1.062.451-1.676.537-.018-.011-2.435 0-2.666 0C.298 9.214 0 8.927 0 8.571c0-.355.298-.642.667-.642h2.666z"></path></svg>
+
+                        <span id='random-text'>Minha música - Aleatório</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav id='header-nav'>
+            <ul>
+                <li class='header-nav-item'><a href="highlights.html" class="header-nav-link">Destaques</a></li>
+                <li class='header-nav-item'><a href="favorites.html" class="header-nav-link">Mais queridas</a></li>
+                <li class='header-nav-item'><a href="playlist.html" class="header-nav-link">Playlists</a></li>
+                <li class='header-nav-item'><a href="albuns.html" class="header-nav-link">Álbuns</a></li>
+                <li class='header-nav-item'><a href="artists.html" class="header-nav-link">Artistas</a></li>
+                <li class='header-nav-item'><a href="podcasts.html" class="header-nav-link">Podcasts</a></li>
+                <li id='header-nav-more' class='header-nav-item'>
+                    <button href="" id='menu-more-button' onclick="showMenuMore()">Mais<svg class="svg-icon svg-icon-sort-desc" focusable="false" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true"><path d="M5.997 8.5L2.5 3.507l7-.007z"></path></svg></>
+                    <div id='menu-more-container'>
+                        <ul id='menu-more-content'>
+                            <li class='menu-more-option'>Histórico de reprodução</li>
+                            <li class='menu-more-option'>Mixes</li>
+                            <li class='menu-more-option'>Meus MP3</li>
+                            <li class='menu-more-option'>Seguindo</li>
+                            <li class='menu-more-option'>Seguidores</li>
+                        </ul>
+                    </div>
+                </li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

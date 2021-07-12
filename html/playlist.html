@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://e-cdns-files.dzcdn.net/cache/images/common/favicon/favicon.a6a53d55264841165a904dbea19d5d73.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style type="text/css">
+        @font-face {
+          font-weight: 400;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-weight: 500;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-weight: 700;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-weight: 900;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+        }</style>
+    <script src="https://kit.fontawesome.com/2efc4a077b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/favorites-style.css">
+    <link rel="stylesheet" href="../css/playlist.css">
+    <title>Playlists</title>
+
+</head>
+<body iid="body">
+
+    <section id='page-topbar'>
+        <form action="" id='search-form'>
+            <button id='topbar-search'>
+                <svg class="svg-icon svg-icon-search topbar-search-icon" focusable="false" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.827 8.584l1.95 1.951a.879.879 0 0 1-1.242 1.242l-1.95-1.95c-2.137 1.55-5.12 1.383-7.02-.517-2.108-2.108-2.083-5.55.055-7.69C3.76-.518 7.202-.543 9.31 1.565c1.9 1.9 2.067 4.883.517 7.02zm-1.256-.013c1.721-1.72 1.741-4.49.045-6.187C6.92.688 4.15.708 2.429 2.43.708 4.149.688 6.919 2.384 8.616c1.696 1.696 4.466 1.676 6.187-.045z"></path></svg>
+            </button>
+            <input type="search" placeholder='Buscar' id="search-input" oninput="showCloseButton()">
+            <button id='search-clear'> 
+                <svg class="svg-icon svg-icon-cancel topbar-search-icon" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></button>
+        </form>
+
+        <div id='topbar-nav'>
+            
+            <div id='topbar-notifications'>
+                <button id='notifications-icon' onclick="showNotifications()">
+                    <svg class="svg-icon svg-icon-bell" focusable="false" height="20" width="20" viewBox="0 0 12 12" aria-hidden="true"><path d="M6.003 0C6.513 0 7.029 0 7 1c1.569.196 2.992 1.677 3 3.5.009 1.957.16 3.293.856 3.854.091.073.144.183.144.3v.961a.385.385 0 0 1-.385.385h-9.23A.385.385 0 0 1 1 9.615v-.961c0-.117.053-.227.144-.3.697-.56.847-1.897.856-3.854.009-1.99 1.23-3.342 2.999-3.5-.015-1 .494-1 1.004-1zM5 11.328L8 11l-.175.283c-.29.472-.733.717-1.305.717-.55 0-.982-.144-1.28-.437L5 11.328z"></path></svg>
+                    <span id='notifications-icon-number'>7</span>
+                </button>
+
+                <div id='notifications-content'>
+                    <h2 id='notifications-title'>Notificações</h2>
+                    <div id='notifications-container'>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/main-img/album6.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>Saudade</a>
+                                    <p class='notifications-artist-name'>Alceu Valença
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='notifications-date'>
+                                <p class='date-info'>38 minutos atrás - Novo Single</p>
+                            </div>
+                        </div>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/main-img/album1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>Reach Out/Olympus</a>
+                                    <p class='notifications-artist-name'>Sufjan Stevens, Angelo De Augustine
+                                    </p>
+                                </div>
+                            </div>
+                                <div class='notifications-date'>
+                                    <p class='date-info'>22 minutos atrás - Novo Single</p>
+                            </div>
+                        </div>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/main-img/album2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>Susie Cincinnati/Big Sur</a>
+                                    <p class='notifications-artist-name'>The Beach Boys
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='notifications-date'>
+                                <p class='date-info'>1 semana atrás - Novo Single</p>
+                            </div>
+                        </div>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/main-img/album4.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>CALL ME IF YOU GET LOST</a>
+                                    <p class='notifications-artist-name'>Tyler, The Creator
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='notifications-date'>
+                                <p class='date-info'>1 semana atrás - Novo Álbum</p>
+                            </div>
+                        </div>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/main-img/album3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>Come Gather 'Round</a>
+                                    <p class='notifications-artist-name'>Feng Suave
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='notifications-date'>
+                                <p class='date-info'>1 semana atrás - Novo Álbum</p>
+                            </div>
+                        </div>
+                        <div class='notifications-item'>
+                            <div class='notifications-album'>
+                                <div class='notifications-album-cover'>
+                                    <a href="#">
+                                        <img src="../img/main-img/album5.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class='notifications-album-info'>
+                                    <a class='notifications-album-name'>The Jackie</a>
+                                    <p class='notifications-artist-name'>Bas, J. Cole, Lil Tjay
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='notifications-date'>
+                                <p class='date-info'>2 semanas atrás - Novo Álbum</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id='topbar-profile'>
+                <button id='profile-icon' onclick='showProfile()'>
+                    <img src="../img/user.jpg" alt="" id='topbar-profile-pic'>
+                </button>
+
+                <div id='profile-navigation'>
+                    <div id='profile-header'>
+                        <div href='' id='header-user'>
+                            <img src="../img/user-40x40.jpg" alt="" id='profile-header-img'>
+                            <p id='profile-user'>username</p>
+                        </div>
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                    </div>
+
+                    <ul id='profile-options'>
+                        <!------ACCOUNT ITEMS------->
+                        <div id='account-info-container'>
+                            <li class='account-item'>
+                                <span class='item-text'>Membros da família</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='account-item'>
+                                <span class='item-text'>Configurações</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='account-item'>
+                                <span class='item-text'>Gerenciar minhas exclusões</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='account-item'>
+                                <span class='item-text'>Desconectar</span>
+                            </li>
+                        </div>
+                        <!----MODES----->
+
+                        <li id='kids-mode' class='account-input'>
+                            <span class='input-text'>Ativar Deezer Kids</span>
+                            <div class='input-container'>
+                                <label for="kids-activate" class='label-input' id="kids-activate" onclick="activateKidsMode()"><input type="checkbox" id="kids-activate-input" class='account-input-input' value>
+                                </label>
+                            </div>
+                        </li>
+                        <li id='night-mode' class='account-input'>
+                            <span class='input-text'>Ativar Modo Noturno</span>
+                            <div class='input-container'>
+                                <label for="night-activate" class='label-input' id="night-activate" onclick="activateNightMode()">    
+                                    <input type="checkbox"  class='account-input-input' id="night-activate-input" value>
+                                </label>
+                            </div>
+                        </li>
+
+                        <!------DEEZER INFO------>
+                        <div id='deezer-info-container'>
+                            <li class='deezer-info' id='deezer-info'>
+                                <span class='deezer-info-item'>Deezer Labs</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='deezer-info'>
+                                <span class='deezer-info-item'>Ajuda</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='deezer-info'>
+                                <span class='deezer-info-item'>Rescursos</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='deezer-info'>
+                                <span class='deezer-info-item'>Sobre nós</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='deezer-info' id='deezer-info'>
+                                <span class='deezer-info-item'>Jobs</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                            <li class='deezer-info' id='deezer-info'>
+                                <span class='deezer-info-item'>Legal</span>
+                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                            </li>
+                        </div>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id='page-sidebar'>
+        <div id='sidebar-header'>
+            <a href="#"><img src="../img/deezer-logo.png" alt="deezer-logo"></a>
+        </div>
+
+        <ul id='sidebar-content'>
+            <li class='sidebar-item sidebar-li'>
+                <a href="#" class='sidebar-link'><svg class="svg-icon" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="M9 7.834V4.858l11-1.692v2.976L9 7.834zm11-.68L9 8.846V19c0 1.657-1.567 3-3.5 3S2 20.657 2 19s1.567-3 3.5-3c.98 0 1.865.345 2.5.9V4l12-1.846L21 2v15c0 1.657-1.567 3-3.5 3S14 18.657 14 17s1.567-3 3.5-3c.98 0 1.865.345 2.5.9V7.154zM17.5 15c1.53 0 2.5 1.035 2.5 2 0 .965-.97 2-2.5 2S15 17.965 15 17c0-.965.97-2 2.5-2zM8 19c0-.965-.97-2-2.5-2S3 18.035 3 19c0 .965.97 2 2.5 2S8 19.965 8 19z"></path></svg> <span class='sidebar-text'>Música</span></a>
+            </li>
+            <li class='sidebar-item sidebar-li'>
+                <a href="#" class='sidebar-link'><svg class="svg-icon" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="M16 6a4 4 0 1 0-8 0h2.5a.5.5 0 0 1 0 1H8v1h2.5a.5.5 0 0 1 0 1H8v1h2.5a.5.5 0 0 1 0 1H8v1a4 4 0 0 0 8 0V6zm-4-5a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V6a5 5 0 0 0-5-5zM5 12H4a8 8 0 0 0 7.5 7.985V22H9v1h6v-1h-2.5v-2.015A8 8 0 0 0 20 12h-1a7 7 0 1 1-14 0z"></path></svg><span>Podcasts</span></a>
+            </li>
+            <li class='sidebar-item sidebar-li'>
+                <a href="#" class='sidebar-link'><svg class="svg-icon" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="M10 3 4.75 6H21a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7a1 1 0 0 1 .52-.878l6.984-3.99L10 3zM3 19V7h18v12H3zm16-8h-4v1h4v-1zm-4 3h4v1h-4v-1zm-3-1a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm1 0a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"></path></svg><span class='sidebar-text'>Rádios</span></a>
+            </li>
+            <li class='sidebar-item sidebar-li'>
+                <a href="#" class='sidebar-link'><svg class="svg-icon" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="M4 6h6.1v4H4V6zM3 6a1 1 0 0 1 1-1h6.1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6zm10.9 0H20v4h-6.1V6zm-1 0a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-6.1a1 1 0 0 1-1-1V6zm-2.8 8H4v4h6.1v-4zM4 13a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6.1a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4zm9.9 1H20v4h-6.1v-4zm-1 0a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-6.1a1 1 0 0 1-1-1v-4z"></path></svg><span class='sidebar-text'>Explorar</span></a>
+            </li>
+            <li class='sidebar-item sidebar-li'>
+                <a href="#" class='sidebar-link'><svg class="svg-icon" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="m12 7.463-.764-.905c-1.497-1.773-2.903-2.437-4.028-2.53-1.117-.092-2.127.363-2.893 1.18-1.573 1.676-1.948 4.666.066 6.761a301.42 301.42 0 0 0 5.974 6.047c.692.68 1.249 1.22 1.645 1.601.396-.381.953-.921 1.645-1.6a301.444 301.444 0 0 0 5.97-6.044 4.963 4.963 0 0 0 .072-6.8c-.763-.809-1.771-1.258-2.89-1.16-1.127.1-2.535.77-4.033 2.545L12 7.463zM12 21s-3.475-3.276-8.34-8.338C-1.034 7.778 5.087-1.08 11.32 5.17c.226.227.453.474.68.743a12.9 12.9 0 0 1 .68-.744c6.233-6.256 12.354 2.513 7.66 7.493C15.475 17.724 12 21 12 21z"></path></svg><span class='sidebar-text'>Favoritos</span></a>
+            </li>
+
+            <li class='favorites-item sidebar-li'>
+                <a href="favorites.html" class='sidebar-link'><span>Mais queridas</span></a>
+            </li>
+            <li class='favorites-item sidebar-li'>
+                <a href="playlist.html" class='sidebar-link'><span>Playlists</span></a>
+            </li>
+            <li class='favorites-item sidebar-li'>
+                <a href="albuns.html" class='sidebar-link'><span>Álbuns</span></a>
+            </li>
+            <li class='favorites-item sidebar-li'>
+                <a href="artists.html" class='sidebar-link'><span>Artistas</span></a>
+            </li>
+            <li class='favorites-item sidebar-li'>
+                <a href="podcasts.html" class='sidebar-link'><span>Podcasts</span></a>
+            </li>
+        </ul>
+    </section>
+
+    <section id='user-header'>
+        <div id='header-user-info'>
+            <img src="../img/user.jpg" alt="" id='header-user-pic'>
+            <div id='header-user-content'>
+                <h2 id='header-title'>monivrgs</h2>
+                    <ul id='follows'>
+                        <li class='follows-item' id='followers'>1 seguidor</li>
+                        <li class='follows-item' id='following'>1 seguindo</li>
+                    </ul>
+                <div id='header-random-button'>
+                    <button id='header-random'>
+                    <span><svg class="svg-icon svg-icon-shuffle" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.333 9.214h-.666C6.826 9.214 5.333 7.775 5.333 6c0-1.066-.894-1.929-2-1.929H.683C.298 4.071 0 3.784 0 3.43c0-.356.298-.643.667-.729.137 0 2.65.01 2.666 0 1.841.086 3.334 1.525 3.334 3.3 0 1.065.896 1.929 2 1.929h3c.185 0 .333.143.333.321v.321L9.333 10.5V9.214zm-.666-5.143c-.367 0-.708.103-1.004.27a4.497 4.497 0 0 0-.672-1.104c.493-.28 1.062-.451 1.709-.537.013.03.51 0 .6 0V1.5L12 3.429v.321a.327.327 0 0 1-.333.321h-3zM3.333 7.93c.369 0 .709-.103 1.004-.27.168.404.4.767.672 1.104-.493.28-1.062.451-1.676.537-.018-.011-2.435 0-2.666 0C.298 9.214 0 8.927 0 8.571c0-.355.298-.642.667-.642h2.666z"></path></svg>
+
+                    <span id='random-text'>Minha música - Aleatório</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav id='header-nav'>
+            <ul>
+                <li class='header-nav-item'><a href="highlights.html" class="header-nav-link">Destaques</a></li>
+                <li class='header-nav-item'><a href="favorites.html" class="header-nav-link">Mais queridas</a></li>
+                <li class='header-nav-item'><a href="playlist.html" class="header-nav-link">Playlists</a></li>
+                <li class='header-nav-item'><a href="albuns.html" class="header-nav-link">Álbuns</a></li>
+                <li class='header-nav-item'><a href="artists.html" class="header-nav-link">Artistas</a></li>
+                <li class='header-nav-item'><a href="podcasts.html" class="header-nav-link">Podcasts</a></li>
+                <li id='header-nav-more' class='header-nav-item'>
+                    <button href="" id='menu-more-button' onclick="showMenuMore()">Mais<svg class="svg-icon svg-icon-sort-desc" focusable="false" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true"><path d="M5.997 8.5L2.5 3.507l7-.007z"></path></svg></>
+                    <div id='menu-more-container'>
+                        <ul id='menu-more-content'>
+                            <li class='menu-more-option'>Histórico de reprodução</li>
+                            <li class='menu-more-option'>Mixes</li>
+                            <li class='menu-more-option'>Meus MP3</li>
+                            <li class='menu-more-option'>Seguindo</li>
+                            <li class='menu-more-option'>Seguidores</li>
+                        </ul>
+                    </div>
+                </li>
+                </div>
+            </ul>
+        </nav>
+    </section>
+
+    <section id='playlist-container'>
+        <div id='playlist-header'>
+            <h2 id='playlist-title'>12 playlists</h2>
+
+            <div id='playlist-nav'>
+                <div id='filter-dropdown'>
+
+                    <div class='button-container'>
+                        <button id='filter-button' class='dropdown-button' onclick='showFilterMenu()'>
+                            <span id='filter-button-content' class='dropdown-button-content'>Tudo <svg class="svg-icon svg-icon-chevron-down dropdown-icon" id="filter-button-svg" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6.013 8.998a.61.61 0 0 0 .416-.169l2.661-2.1 2.662-2.102c.654-.517-.12-1.498-.775-.981l-2.483 1.96-2.482 1.96-4.99-3.921c-.656-.515-1.428.468-.773.983L5.597 8.83a.61.61 0 0 0 .416.168z"></path></svg></span>
+                        </button>
+                    </div>
+                    <ul id="filter-dropdown-menu">
+                        <li class='filter-dropdown-item'>Tudo</li>
+                        <li class='filter-dropdown-item'>Minhas playlists</li>
+                        <li class='filter-dropdown-item'>Playlists adicionadas</li>
+                        <li class='filter-dropdown-item'>Playlists colaborativas</li>
+                    </ul>
+                </div>
+
+                <input type="search" name="playlist-search" id="playlist-search" placeholder="Buscar" oninput="showCloseSearchButton()">
+                <button id='playlist-search-clear' onclick="clearInput()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="close"><rect width="12" height="12" transform="rotate(180 12 12)" opacity="0"/><path d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/></g></g></svg>
+                </button>
+
+                <div id='order-dropdown'>
+                    <div class='button-container'>
+                        <button id='order-button' class='dropdown-button' onclick='showOrderMenu()'>
+                            <span id='order-button-content' class='dropdown-button-content'>A-Z<svg class="svg-icon svg-icon-chevron-down dropdown-icon" id="order-button-svg" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6.013 8.998a.61.61 0 0 0 .416-.169l2.661-2.1 2.662-2.102c.654-.517-.12-1.498-.775-.981l-2.483 1.96-2.482 1.96-4.99-3.921c-.656-.515-1.428.468-.773.983L5.597 8.83a.61.61 0 0 0 .416.168z"></path></svg></span>
+                        </button> 
+                    </div>  
+
+                    <ul id="order-dropdown-menu">
+                        <li class='order-dropdown-item'>A-Z</li>
+                        <li class='order-dropdown-item'>Atualizados recentemente</li>
+                        <li class='order-dropdown-item'>Adicionados recentes</li>
+                        <li class='order-dropdown-item'>Mais ouvidas</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div id='playlist-content'>
+
+            <ul id='playlist-list'>
+                <li class='playlist-list-item'>
+                    <div id='create-playlist'>
+                        <button id='new-playlist-button'>
+                            <i id='new-playlist-icon' class="fas fa-plus"></i>
+                        </button>
+
+                        <span id='new-playlist-text'>Criar uma playlist</span>
+                    </div>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/1.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu'>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>1</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/apesar-de-voce.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu'>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>Apesar de você</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/bloco-truck.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu'>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>Bloco Truck do Desejo</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/br-anos-70.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu'>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>Brasil anos 70</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/fechadinha-do-ano.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu'>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>fechadinha do ano</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/oi.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu'>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>oi</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/indie-br.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu'>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>playlist topster dos indie br</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/pontos-exu.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu'>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>Pontos - Exu e Pomba Gira</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/tagua-tagua.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu'>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>Tagua Tagua</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/tim-maia.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu'>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>tim maia só as braba</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/bloco-truck.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu'>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>Truck do desejo - a playlist</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='playlist-list-item'>
+                    <figure class='playlist-cover'>
+                        <img src="../img/playlist/viradinha.jpg" alt="">
+
+                        <div class='playlist-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='playlist-more-options'>
+                                <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='playlist-options-menu' >
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-play-next" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 8.5h2.5v2H0v-2zM2.5 7l3 2.5-3 2.5V7zm6.75-1.5a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5zm0 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5zm0 1a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='playlist-options-menu-item'>
+                                        <button class='playlist-options-menu-item-btn'>
+                                            <span class='playlist-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='playlist-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='playlist-infos'>
+                            <a href="#" class='playlist-name'>viradinha das good vibe</a>
+                            <span class='playlist-access-specifier'>Pública</span>
+                        </figcaption>
+                    </figure>
+                </li>
+    
+            </ul>   
+        </div>
+    </section>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/playlists.js"></script>
+</body>
+</html>
