@@ -15,7 +15,7 @@ function searchArtists(){
         for(let i = 0; i <= artists.length; i++){
             let artistName = artists[i].getElementsByClassName("artist-name")[0] //[0] => acesso a coleção HTML
             let artistNameText = artistName.innerHTML.toLowerCase()
-
+            console.log(artistName)
             if(artistNameText.indexOf(filter) > -1){
                artists[i].style.display = "flex"
             }else{

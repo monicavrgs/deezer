@@ -40,25 +40,32 @@ function searchPlaylist(){
     let filter = inputField.value.toLowerCase() 
     let playlist = document.getElementsByClassName("playlist-list-item")
 
-        for(let i = 0; i <= playlist.length; i++){
+        for(let i = 1; i <= playlist.length; i++){
             let playlistName = playlist[i].getElementsByClassName("playlist-name")[0] //[0] => acesso a coleção HTML
             let playlistNameText = playlistName.innerHTML.toLowerCase()
 
             if(playlistNameText.indexOf(filter) > -1){
-               playlist[i].style.display = "flex"
+              playlist[i].style.display = "flex"
             }else{
                 playlist[i].style.display = 'none'
-            }
-        }      
+           }
+      }      
     })    
 }
 
 function clearInput(){
     let button = document.getElementById("playlist-search-clear")
     let inputField = document.getElementById("playlist-search")
+    let playlist = document.getElementsByClassName("playlist-list-item")
+
+
     inputField.value = ""
     inputField.placeholder = "Buscar"
     button.style.display = "none"
+
+    for(let i = 0; i <= playlist.length; i++){
+        playlist[i].style.display = 'flex'
+    }
 }
 
 searchPlaylist()
