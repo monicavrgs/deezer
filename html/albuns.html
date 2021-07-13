@@ -3,19 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link href="https://e-cdns-files.dzcdn.net/cache/images/common/favicon/favicon.a6a53d55264841165a904dbea19d5d73.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style type="text/css">
+        @font-face {
+          font-weight: 400;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-weight: 500;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-weight: 700;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-weight: 900;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+        }</style>
+    <script src="https://kit.fontawesome.com/2efc4a077b.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/favorites-style.css">
-    <title>Playlists</title>
+    <link rel="stylesheet" href="../css/albuns.css">
+    <title>Albuns</title>
 
 </head>
-<body iid="body">
+<body id="body">
 
-    <div id='page-topbar'>
+    <section id='page-topbar'>
         <form action="" id='search-form'>
             <button id='topbar-search'>
                 <svg class="svg-icon svg-icon-search topbar-search-icon" focusable="false" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.827 8.584l1.95 1.951a.879.879 0 0 1-1.242 1.242l-1.95-1.95c-2.137 1.55-5.12 1.383-7.02-.517-2.108-2.108-2.083-5.55.055-7.69C3.76-.518 7.202-.543 9.31 1.565c1.9 1.9 2.067 4.883.517 7.02zm-1.256-.013c1.721-1.72 1.741-4.49.045-6.187C6.92.688 4.15.708 2.429 2.43.708 4.149.688 6.919 2.384 8.616c1.696 1.696 4.466 1.676 6.187-.045z"></path></svg>
@@ -40,7 +74,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album6.jpg" alt="">
+                                        <img src="../img/main-img/album6.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -57,7 +91,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album1.jpg" alt="">
+                                        <img src="../img/main-img/album1.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -74,7 +108,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album2.jpg" alt="">
+                                        <img src="../img/main-img/album2.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -91,7 +125,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album4.jpg" alt="">
+                                        <img src="../img/main-img/album4.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -108,7 +142,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album3.jpg" alt="">
+                                        <img src="../img/main-img/album3.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -125,7 +159,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album5.jpg" alt="">
+                                        <img src="../img/main-img/album5.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -226,9 +260,9 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id='page-sidebar'>
+    <section id='page-sidebar'>
         <div id='sidebar-header'>
             <a href="#"><img src="../img/deezer-logo.png" alt="deezer-logo"></a>
         </div>
@@ -266,9 +300,9 @@
                 <a href="podcasts.html" class='sidebar-link'><span>Podcasts</span></a>
             </li>
         </ul>
-    </div>
+    </section>
 
-    <div id='user-header'>
+    <section id='user-header'>
         <div id='header-user-info'>
             <img src="../img/user.jpg" alt="" id='header-user-pic'>
             <div id='header-user-content'>
@@ -281,7 +315,7 @@
                     <button id='header-random'>
                     <span><svg class="svg-icon svg-icon-shuffle" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.333 9.214h-.666C6.826 9.214 5.333 7.775 5.333 6c0-1.066-.894-1.929-2-1.929H.683C.298 4.071 0 3.784 0 3.43c0-.356.298-.643.667-.729.137 0 2.65.01 2.666 0 1.841.086 3.334 1.525 3.334 3.3 0 1.065.896 1.929 2 1.929h3c.185 0 .333.143.333.321v.321L9.333 10.5V9.214zm-.666-5.143c-.367 0-.708.103-1.004.27a4.497 4.497 0 0 0-.672-1.104c.493-.28 1.062-.451 1.709-.537.013.03.51 0 .6 0V1.5L12 3.429v.321a.327.327 0 0 1-.333.321h-3zM3.333 7.93c.369 0 .709-.103 1.004-.27.168.404.4.767.672 1.104-.493.28-1.062.451-1.676.537-.018-.011-2.435 0-2.666 0C.298 9.214 0 8.927 0 8.571c0-.355.298-.642.667-.642h2.666z"></path></svg>
 
-                        <span id='random-text'>Minha música - Aleatório</span>
+                    <span id='random-text'>Minha música - Aleatório</span>
                     </button>
                 </div>
             </div>
@@ -310,8 +344,1082 @@
                 </div>
             </ul>
         </nav>
-    </div>
+    </section>
+
+    <section id='albuns-container'>
+        <div id='albuns-header'>
+            <h2 id='albuns-title'>257 albuns</h2>
+
+            <div id='albuns-nav'>
+
+                <input type="search" name="albuns-search" id="albuns-search" placeholder="Buscar" oninput="showCloseSearchButton()">
+                <button id='albuns-search-clear' onclick="clearInput()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="close"><rect width="12" height="12" transform="rotate(180 12 12)" opacity="0"/><path d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/></g></g></svg>
+                </button>
+
+                <div id='order-dropdown'>
+                    <div class='button-container'>
+                        <button id='order-button' class='dropdown-button' onclick='showOrderMenu()'>
+                            <span id='order-button-content' class='dropdown-button-content'>A-Z(artista)<svg class="svg-icon svg-icon-chevron-down dropdown-icon" id="order-button-svg" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6.013 8.998a.61.61 0 0 0 .416-.169l2.661-2.1 2.662-2.102c.654-.517-.12-1.498-.775-.981l-2.483 1.96-2.482 1.96-4.99-3.921c-.656-.515-1.428.468-.773.983L5.597 8.83a.61.61 0 0 0 .416.168z"></path></svg></span>
+                        </button> 
+                    </div>  
+
+                    <ul id="order-dropdown-menu">
+                        <li class='order-dropdown-item'>A-Z(Artista)</li>
+                        <li class='order-dropdown-item'>Z-A(artista)</li>
+                        <li class='order-dropdown-item'>Adicionados recentes</li>
+                        <li class='order-dropdown-item'>Mais ouvidos</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+            <ul id='albuns-list'>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/academia-de-berlinda.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Nada Sem Ela</a>
+                            <span class='album-artist'>Academia de Berlinda</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/afoxe.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Afoxé Oyá Alaxé</a>
+                            <span class='album-artist'>Afoxé Oyá Alaxé</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/albert.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Yours To Keep</a>
+                            <span class='album-artist'>Albert Hammond Jr</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/alceu.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Sete Desejos</a>
+                            <span class='album-artist'>Alceu Valença</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/submarine.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Submarine - Original Songs From The Film By Alex Turner</a>
+                            <span class='album-artist'>Alex Turner</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/crux-apeles.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Crux</a>
+                            <span class='album-artist'>Apeles</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/neon-bible.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Neon Bible</a>
+                            <span class='album-artist'>Arcade Fire</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/reflektor.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Reflektor</a>
+                            <span class='album-artist'>Arcade Fire</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/the-suburbs.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>The Suburbs</a>
+                            <span class='album-artist'>Arcade Fire</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/arthur-iii.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Arthur III</a>
+                            <span class='album-artist'>Arthur III</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/azura.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Abissal</a>
+                            <span class='album-artist'>Azura</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/badkid-bakar.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Badkid</a>
+                            <span class='album-artist'>Bakar</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/something-i-said-bakar.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Something I Said</a>
+                            <span class='album-artist'>Bakar</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/atlas-baleia.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Atlas</a>
+                            <span class='album-artist'>Baleia</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/coracao-fantasma.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Coração Fantasma</a>
+                            <span class='album-artist'>Baleia</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li  class='albuns-list-item'>
+                    <figure class='albuns-cover'>
+                        <img src="../img/albuns/quebra-azul.jpg" alt="">
+
+                        <div class='albuns-option-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <div class='albuns-more-options'>
+                                <button class='albuns-option-more-button' onclick="showAlbunsOptions()">
+                                    <span class='more-button-icon'>
+                                        <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                    </span>
+                                </button>
+
+                                <ul class='albuns-options-menu'>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-cancel" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ouvir em seguida</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-qlist-add" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 11v-1h9v1H3zm9-4v1H5V7h7zM4 4V1H3v3H0v1h3v3h1V5h3V4H4zm4 0h4v1H8V4z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Adicionar à lista de espera</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Excluir dos meus favoritos</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-share" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 3.754C0 3.062.56 2.5 1.251 2.5H11v7.246C11 10.438 10.44 11 9.749 11H1.25A1.25 1.25 0 0 1 0 9.746V3.754zM1 3.5l1-1h9v5l-1 1.01V10H1V3.5z" fill-rule="evenodd"></path><path d="M8 4.8v2.4l4-3.7L8 0v2.5c-5 0-6 2.907-6 7 0-1.63 1.03-4.7 5.636-4.7H8z" fill-rule="evenodd"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Compartilhar</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-resize-up" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.132 10.934h1.601c.294 0 .532.236.532.533a.535.535 0 0 1-.532.533H0V8.267c0-.294.237-.532.533-.532.295 0 .533.241.533.531v1.601L3.7 7.235a.8.8 0 0 1 1.13-.002l-.062-.062a.8.8 0 0 1-.002 1.13l-2.633 2.633zm7.736-9.868H8.267a.531.531 0 0 1-.532-.533c0-.294.242-.533.532-.533H12v3.733a.531.531 0 0 1-.533.532.535.535 0 0 1-.533-.531V2.133L8.3 4.765a.8.8 0 0 1-1.13.002l.062.062a.8.8 0 0 1 .002-1.13l2.633-2.633z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Ampliar capa</span>
+                                        </button>
+                                    </li>
+                                    <li class='albuns-options-menu-item'>
+                                        <button class='albuns-options-menu-item-btn'>
+                                            <span class='albuns-options-menu-icon'><svg class="svg-icon svg-icon-comment" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.995 2h8.01c.55 0 .995.447.995 1.001V7A1 1 0 0 1 10.005 8h-8.01A.997.997 0 0 1 1 6.999V3A1 1 0 0 1 1.995 2zM6 8h3v2L6 8z"></path></svg></span>
+                                            <span class='albuns-options-menu-item-text'>Reportar um problema</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <figcaption class='album-infos'>
+                            <a href="#" class='album-name'>Quebra Azul</a>
+                            <span class='album-artist'>Baleia</span>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>   
+        </div>
+    </section>
 
     <script src="../js/script.js"></script>
+    <script src="../js/albuns.js"></script>
 </body>
 </html>

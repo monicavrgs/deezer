@@ -1,31 +1,26 @@
-#playlist-container{
+#albuns-container{
     position: relative;
     left: 220px;
     top: 60px;
-    max-width: 80%;
-    padding-right: 80px;
     padding-bottom: 20px;
 }
 
-/* header */
-#playlist-header{
+#albuns-header{
     display: flex;
     justify-content: space-between;
-    padding-left: 35px;
+    padding-left: 40px;
     padding-top: 38px;
+    padding-right: 200px;
 }
 
-
-#playlist-title{
+#albuns-title{
     font-size: 32px;
     font-weight: 600;
     color: #1d1d1d;
 }
-/*header nav*/
 
-#playlist-nav{
+#albuns-nav{
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     width: 40%;
 }
@@ -36,8 +31,8 @@
     background-color: #FFF;
     border-radius: 40px;
     border: 1px solid #adadad;
-    padding: 8px 6px;
-    margin: 2px;
+    padding: 10px 6px;
+    margin: 3px;
     text-transform: uppercase;
     font-size: 12px;
     transition: 0.2s;
@@ -47,10 +42,6 @@
 .dropdown-button-content{
     font-weight: bold;
     padding-left: 5px;
-}
-
-.dropdown-button:active{
-    padding: 4px;
 }
 
 .button-container{
@@ -72,20 +63,21 @@
 
 /* menu dropdown */
 
-#filter-dropdown, #order-dropdown{
+#order-dropdown{
     position: relative;
 }
 
-#filter-dropdown-menu, #order-dropdown-menu{
+#order-dropdown-menu{
     box-shadow: 0px 2px 8px #aaa9a9;
-    font-size: 14px;
+    font-size: 12px;
     width: 200px;
     color: #5e5d5d;
     position: absolute;
-    top: 35px;
+    right: 0px;
+    top: 40px;
     background-color: #FFF;
-    z-index: 1;
     display: none;
+    z-index: 1;
 
     animation-name: growDown;
     animation-duration: 200ms;  
@@ -107,153 +99,101 @@
     }
 }
 
-#filter-dropdown-menu{
-    width: 170px;
-}
-
-#order-dropdown-menu{
-    right: 0px;
-}
-
-.filter-dropdown-item, .order-dropdown-item{
+.order-dropdown-item{
     padding: 9px 15px;
 
 }
 
-.filter-dropdown-item:hover{
-    background-color: #e6e3e3;
-    cursor: pointer;
-    color: #252525;
-}
-
 .order-dropdown-item:hover{
-    background-color: #e6e3e3;
+    background-color: #c9c9c9;
     cursor: pointer;
     color: #252525;
 }
 
 /* search input */
 
-#playlist-search{
+#albuns-search{
     border-radius: 3px;
     border: 1px solid #adadad;
-    padding: 7px 08px;
+    padding: 10px 8px;
+    margin-right: 10px;
     font-size: 12px;
     width: 55%;
     position: relative;
     transition: 0.3s;
 }
 
-#playlist-search:focus{
+#albuns-search:focus{
     border: 1px solid #df3f3f;
 }
 
-#playlist-search-clear{
+#albuns-search-clear{
     background-color: transparent;
     border: 0;
     color: #252525;
     font-weight: bold;
     position: absolute;
-    right: 165px;
+    left: 920px;
     display: none;
 }
 
-#playlist-search-clear svg{
+#albuns-search-clear svg{
     fill: #4e4e4e;
 }
 
-#playlist-search-clear:hover{
+#albuns-search-clear:hover{
     cursor: pointer;
 }
 
-/* new playlist */
 
+/*albuns list */
 
-#playlist-list{
-    width: 100%;
+#albuns-list{
     display: flex;
     flex-wrap: wrap;
+    padding-right: 200px;
 }
 
-.playlist-list-item{
-    width: 22%;
+.albuns-list-item{
+    width: 20%;
     height: 260px;
     margin-top: 40px;
-    margin-left: 32px;
+    margin-left: 40px;
     margin-bottom: 15px;
 }
 
-#create-playlist{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;;
-    border-radius: 5px;
-    border: dotted 1px #df3f3f;
-    font-family: 'Open Sans', sans-serif;
-    transition: 0.3s;
-}
-
-#new-playlist-button{
-    width: 12%;
-    padding: 16px 22px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    border: 0;
-    border-radius: 5px;
-    background-color: #df3f3f;
-}
-
-#new-playlist-icon{
-    color: #FFF;
-}
-
-#create-playlist:hover{
-    background-color: #ebe7e7;
-    cursor: pointer;
-}
-
-#new-playlist-button:hover{
-    cursor: pointer;
-}
-
-/* playlist item */
-
-
-.playlist-cover{
+.albuns-cover{
     position: relative;
     transition: 0.3s;
 }
 
-.playlist-cover img{
+.albuns-cover img{
     width: 100%;
     height: 80%;
     border-radius: 4px;
     box-shadow: 0px 2px 8px #dfdfdf;
 }
 
-.playlist-cover:hover img{
+.albuns-cover:hover{
     opacity: 80%;
     cursor: pointer;
 }
 
-.playlist-cover:hover .playlist-option-more-button{
+.albuns-cover:hover .albuns-option-more-button{
     display: block;
 }
 
-/* playlist buttons */
 
-.playlist-option-buttons{
+/* albuns buttons */
+
+.albuns-option-buttons{
     display: flex;
     position: relative;
     top: -50px;
     left: 15px;
 }
 
-.play-button, .playlist-option-more-button{
+.play-button, .albuns-option-more-button{
     border-radius: 50%;
     text-align: center;
     padding: 10px;
@@ -264,7 +204,7 @@
     box-shadow: 2px 2px 0 rgb(0 0 0 / 25%);
 }
 
-.playlist-option-more-button{
+.albuns-option-more-button{
     display: none;
 }
 
@@ -272,7 +212,7 @@
     margin-right: 0;
 }
 
-.playlist-option-more-button svg{
+.albuns-option-more-button svg{
     margin: 0 1px;
 }
 
@@ -281,18 +221,19 @@
     padding: 12px;
 }
 
-.playlist-option-more-button:hover{
+.albuns-option-more-button:hover{
     cursor: pointer;
     padding: 12px;
 }
 
-/*playlist options menu dropdown */
-.playlist-more-options{
+/*albuns options menu dropdown */
+
+.albuns-more-options{
     position:relative;
     border-radius: 5px;
 }
 
-.playlist-options-menu{
+.albuns-options-menu{
     flex-direction: column;
     position: absolute;
     width: 330px;
@@ -306,11 +247,11 @@
     display: none;
 }
 
-.playlist-options-menu-item{
+.albuns-options-menu-item{
     background-color: #fff;
 }
 
-.playlist-options-menu-item-btn{
+.albuns-options-menu-item-btn{
     border: none;
     background-color: #FFF;
     color: #777575;
@@ -321,42 +262,42 @@
     text-align: left;
 }
 
-.playlist-options-menu-item-btn:hover{
+.albuns-options-menu-item-btn:hover{
     background-color: #ebe7e7;
     cursor: pointer;
 }
 
-.playlist-options-menu-item-btn svg{
+.albuns-options-menu-item-btn svg{
     fill: #858585;
     font-size: 16px;
 }
 
-/*playlist infos */
+/*albuns infos */
 
-.playlist-infos{
+.album-infos{
     display: flex;
     flex-direction: column;
     margin-top: -25px;
     font-family: 'Open Sans', sans-serif;
 }
 
-.playlist-infos a{
+.album-infos a{
     color: #000;
 }
 
-.playlist-name{
+.album-name{
     font-size: 15px;
 }
 
-.playlist-name:hover{
+.album-name:hover{
     text-decoration: underline;
 }
 
-.playlist-access-specifier{
+.album-artist{
     font-size: 12px;
     margin-top: 8px;
 }
 
-.playlist-access-specifier:hover{
+.album-artist:hover{
     cursor: text;
 }

@@ -22,7 +22,7 @@ input:focus{
     border-bottom: 1px solid #f3f3f3;
     border-left: 1px solid #f3f3f3;;
     background-color: #FFF;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* topbar search */
@@ -541,6 +541,7 @@ input:focus{
 #header-random-button{
     border-radius: 40px;
 }
+
 #header-random-button:active{
     border: solid 3px #f14a4a;
 }
@@ -596,7 +597,6 @@ input:focus{
 
 .current-page-header-nav{
     border-bottom: solid 2px #f14a4a;
-
 }
 
 /*header item menu more*/
@@ -640,6 +640,7 @@ input:focus{
 #header-nav-more{
     position: relative;
 }
+
 #menu-more-container{
     display: none;
 }
@@ -654,8 +655,28 @@ input:focus{
     font-size: 13px;
     box-shadow: 0px 2px 8px #aaaaaa;
     position: absolute;
-    top: 52px;
+    top: 45px;
     right: 5px;
+    z-index: 1;
+
+    animation-name: growDown;
+    animation-duration: 200ms;  
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+    transform-origin: top center
+}
+
+@keyframes growDown{
+    0% {
+    transform: scaleY(0)
+    }
+
+    100% {
+        transform: scaleY(1)
+    }
 }
 
 .menu-more-option{

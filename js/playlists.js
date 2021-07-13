@@ -32,9 +32,33 @@ function showCloseSearchButton(){
     button.style.display = "flex"
 }
 
+function searchPlaylist(){
+
+    let inputField = document.getElementById("playlist-search")
+    inputField.addEventListener("input", ()=>{
+    
+    let filter = inputField.value.toLowerCase() 
+    let playlist = document.getElementsByClassName("playlist-list-item")
+
+        for(let i = 0; i <= playlist.length; i++){
+            let playlistName = playlist[i].getElementsByClassName("playlist-name")[0] //[0] => acesso a coleção HTML
+            let playlistNameText = playlistName.innerHTML.toLowerCase()
+
+            if(playlistNameText.indexOf(filter) > -1){
+               playlist[i].style.display = "flex"
+            }else{
+                playlist[i].style.display = 'none'
+            }
+        }      
+    })    
+}
+
 function clearInput(){
     let button = document.getElementById("playlist-search-clear")
     let inputField = document.getElementById("playlist-search")
     inputField.value = ""
     inputField.placeholder = "Buscar"
+    button.style.display = "none"
 }
+
+searchPlaylist()

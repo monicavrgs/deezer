@@ -3,19 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link href="https://e-cdns-files.dzcdn.net/cache/images/common/favicon/favicon.a6a53d55264841165a904dbea19d5d73.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style type="text/css">
+        @font-face {
+          font-weight: 400;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-weight: 500;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-weight: 700;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-weight: 900;
+          font-style:  normal;
+          font-family: 'Circular-Loom';
+        
+          src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+        }</style>
+    <script src="https://kit.fontawesome.com/2efc4a077b.js" crossorigin="anonymous"></script>
+
 
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/favorites-style.css">
+    <link rel="stylesheet" href="../css/artists.css">
     <title>Artists</title>
 
 </head>
-<body iid="body">
+<body id="body">
 
-    <div id='page-topbar'>
+    <section id='page-topbar'>
         <form action="" id='search-form'>
             <button id='topbar-search'>
                 <svg class="svg-icon svg-icon-search topbar-search-icon" focusable="false" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.827 8.584l1.95 1.951a.879.879 0 0 1-1.242 1.242l-1.95-1.95c-2.137 1.55-5.12 1.383-7.02-.517-2.108-2.108-2.083-5.55.055-7.69C3.76-.518 7.202-.543 9.31 1.565c1.9 1.9 2.067 4.883.517 7.02zm-1.256-.013c1.721-1.72 1.741-4.49.045-6.187C6.92.688 4.15.708 2.429 2.43.708 4.149.688 6.919 2.384 8.616c1.696 1.696 4.466 1.676 6.187-.045z"></path></svg>
@@ -40,7 +75,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album6.jpg" alt="">
+                                        <img src="../img/main-img/album6.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -57,7 +92,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album1.jpg" alt="">
+                                        <img src="../img/main-img/album1.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -74,7 +109,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album2.jpg" alt="">
+                                        <img src="../img/main-img/album2.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -91,7 +126,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album4.jpg" alt="">
+                                        <img src="../img/main-img/album4.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -108,7 +143,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album3.jpg" alt="">
+                                        <img src="../img/main-img/album3.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -125,7 +160,7 @@
                             <div class='notifications-album'>
                                 <div class='notifications-album-cover'>
                                     <a href="#">
-                                        <img src="../img/playlist/album5.jpg" alt="">
+                                        <img src="../img/main-img/album5.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class='notifications-album-info'>
@@ -226,9 +261,9 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id='page-sidebar'>
+    <section id='page-sidebar'>
         <div id='sidebar-header'>
             <a href="#"><img src="../img/deezer-logo.png" alt="deezer-logo"></a>
         </div>
@@ -266,9 +301,9 @@
                 <a href="podcasts.html" class='sidebar-link'><span>Podcasts</span></a>
             </li>
         </ul>
-    </div>
+    </section>
 
-    <div id='user-header'>
+    <section id='user-header'>
         <div id='header-user-info'>
             <img src="../img/user.jpg" alt="" id='header-user-pic'>
             <div id='header-user-content'>
@@ -281,7 +316,7 @@
                     <button id='header-random'>
                     <span><svg class="svg-icon svg-icon-shuffle" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.333 9.214h-.666C6.826 9.214 5.333 7.775 5.333 6c0-1.066-.894-1.929-2-1.929H.683C.298 4.071 0 3.784 0 3.43c0-.356.298-.643.667-.729.137 0 2.65.01 2.666 0 1.841.086 3.334 1.525 3.334 3.3 0 1.065.896 1.929 2 1.929h3c.185 0 .333.143.333.321v.321L9.333 10.5V9.214zm-.666-5.143c-.367 0-.708.103-1.004.27a4.497 4.497 0 0 0-.672-1.104c.493-.28 1.062-.451 1.709-.537.013.03.51 0 .6 0V1.5L12 3.429v.321a.327.327 0 0 1-.333.321h-3zM3.333 7.93c.369 0 .709-.103 1.004-.27.168.404.4.767.672 1.104-.493.28-1.062.451-1.676.537-.018-.011-2.435 0-2.666 0C.298 9.214 0 8.927 0 8.571c0-.355.298-.642.667-.642h2.666z"></path></svg>
 
-                        <span id='random-text'>Minha música - Aleatório</span>
+                    <span id='random-text'>Minha música - Aleatório</span>
                     </button>
                 </div>
             </div>
@@ -310,8 +345,546 @@
                 </div>
             </ul>
         </nav>
-    </div>
+    </section>
+
+    <section id='artists-container'>
+        <div id='artists-header'>
+            <h2 id='artists-title'>192 artistas</h2>
+
+            <div id='artists-nav'>
+
+                <input type="search" name="artists-search" id="artists-search" placeholder="Buscar" oninput="showCloseSearchButton()">
+                <button id='artists-search-clear' onclick="clearInput()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="close"><rect width="12" height="12" transform="rotate(180 12 12)" opacity="0"/><path d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/></g></g></svg>
+                </button>
+
+                <div id='order-dropdown'>
+                    <div class='button-container'>
+                        <button id='order-button' class='dropdown-button' onclick='showOrderMenu()'>
+                            <span id='order-button-content' class='dropdown-button-content'>A-Z<svg class="svg-icon svg-icon-chevron-down dropdown-icon" id="order-button-svg" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6.013 8.998a.61.61 0 0 0 .416-.169l2.661-2.1 2.662-2.102c.654-.517-.12-1.498-.775-.981l-2.483 1.96-2.482 1.96-4.99-3.921c-.656-.515-1.428.468-.773.983L5.597 8.83a.61.61 0 0 0 .416.168z"></path></svg></span>
+                        </button> 
+                    </div>  
+
+                    <ul id="order-dropdown-menu">
+                        <li class='order-dropdown-item'>A-Z</li>
+                        <li class='order-dropdown-item'>Adicionados recentes</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+            <ul id='artists-list'>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/academia.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg>
+                                </span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Nada Sem Ela</a>
+                            <span class='artist-fans'>Academia de Berlinda</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/afoxe.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Afoxé Oyá Alaxé</a>
+                            <span class='artist-fans'>610 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/aiye.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>ÀIYÉ</a>
+                            <span class='artist-fans'>137 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/alceu.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Alceu Valença</a>
+                            <span class='artist-fans'>536.330 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/ale-sater.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Ale Sater</a>
+                            <span class='artist-fans'>139 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/ana-frango-eletrico.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Ana Frango Elétrico</a>
+                            <span class='artist-fans'>2.385 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/ana-muller.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Ana Muller</a>
+                            <span class='artist-fans'>7.021 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/anelis.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Anelis Assumpção</a>
+                            <span class='artist-fans'>14.759 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/angel-olsen.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Angel Olsen</a>
+                            <span class='artist-fans'>17.654 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/animal-collective.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Animal Collective</a>
+                            <span class='artist-fans'>58.795 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/apeles.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Apeles</a>
+                            <span class='artist-fans'>148 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/arcade fire.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Arcade Fire</a>
+                            <span class='artist-fans'>576.906 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/arlo-parks.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Arlo Parks</a>
+                            <span class='artist-fans'>20.666 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/arthur-melo.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Arthur Melo</a>
+                            <span class='artist-fans'>95 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/arthur-verocai.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Arthur Verocai</a>
+                            <span class='artist-fans'>1.276 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/azymuth.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Azymuth</a>
+                            <span class='artist-fans'>4.436 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/bakar.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Bakar</a>
+                            <span class='artist-fans'>5.686 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/balthazar.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Balthazar</a>
+                            <span class='artist-fans'>60.527 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/banda-forra.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Banda-Fôrra</a>
+                            <span class='artist-fans'>709 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/barro.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Barro</a>
+                            <span class='artist-fans'>2.061 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+                <li  class='artists-list-item'>
+                    <figure class='artists-cover'>
+                        <img src="../img/artists/bauhaus.jpg" alt="">
+
+                        <div class='artists-buttons'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+
+                            <button class='artists-like'>
+                                <span class='like-icon'>
+                                    <svg class="svg-icon svg-icon-love-outline is-active" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path class="svg-path" fill="none" stroke-width="1.2" d="M6 10.77a26.815 26.815 0 0 0 2.595-2.087c.996-.913 1.78-1.8 2.267-2.612.356-.594.538-1.124.538-1.571 0-1.734-1.207-2.9-2.65-2.9-.616 0-1.17.229-1.656.619a3.006 3.006 0 0 0-.595.614L6 3.582l-.5-.75a3.006 3.006 0 0 0-.593-.613C4.42 1.829 3.867 1.6 3.25 1.6 1.807 1.6.6 2.766.6 4.5c0 .447.182.977.538 1.571.488.812 1.271 1.699 2.267 2.612A26.815 26.815 0 0 0 6 10.77z"></path></svg></span>
+                            </button>
+                        </div>    
+                        
+                        <figcaption class='artist-infos'>
+                            <a href="#" class='artist-name'>Bauhaus</a>
+                            <span class='artist-fans'>79.797 fãs</span>
+                        </figcaption>
+                    </figure>
+
+                </li>
+               
+            </ul>   
+        </div>
+    </section>
 
     <script src="../js/script.js"></script>
+    <script src="../js/artists.js"></script>
 </body>
 </html>

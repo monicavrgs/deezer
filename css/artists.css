@@ -1,0 +1,299 @@
+#artists-container{
+    position: relative;
+    left: 220px;
+    top: 60px;
+    padding-bottom: 20px;
+}
+
+#artists-header{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-top: 38px;
+    padding-right: 200px;
+}
+
+#artists-title{
+    font-size: 32px;
+    font-weight: 600;
+    color: #1d1d1d;
+}
+
+#artists-nav{
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+/*menu dropdown button*/
+
+.dropdown-button{
+    background-color: #FFF;
+    border-radius: 40px;
+    border: 1px solid #adadad;
+    padding: 10px 6px;
+    margin: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: 0.2s;
+    color: #252525;
+}
+
+.dropdown-button-content{
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+
+.button-container{
+    border-radius: 40px;
+}
+
+.button-container:active{
+    border: 2px solid #c5c5c5;
+}
+
+.dropdown-icon{
+    padding-left: 6px;
+}
+
+.dropdown-button:hover{
+    cursor: pointer;
+    background-color: #d1d1d185;
+}
+
+/* menu dropdown */
+
+#order-dropdown{
+    position: relative;
+}
+
+#order-dropdown-menu{
+    box-shadow: 0px 2px 8px #aaa9a9;
+    font-size: 12px;
+    width: 200px;
+    color: #5e5d5d;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    background-color: #FFF;
+    z-index: 1;
+    display: none;
+  
+    animation-name: growDown;
+    animation-duration: 200ms;  
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+    transform-origin: top center
+
+}
+
+@keyframes growDown{
+    0% {
+    transform: scaleY(0)
+    }
+
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+.order-dropdown-item{
+    padding: 10px 15px;
+
+}
+
+.order-dropdown-item:hover{
+    background-color: #dddddd;
+    cursor: pointer;
+    color: #252525;
+}
+
+/* search input */
+
+
+#artists-search:focus{
+    border: 1px solid #df3f3f;
+}
+
+#artists-search-clear{
+    background-color: transparent;
+    border: 0;
+    color: #252525;
+    font-weight: bold;
+    position: absolute;
+    left: 920px;
+}
+
+#artists-search-clear svg{
+    fill: #4e4e4e;
+}
+
+#artists-search-clear:hover{
+    cursor: pointer;
+}
+
+#artists-search{
+    border-radius: 3px;
+    border: 1px solid #adadad;
+    padding: 10px 8px;
+    font-size: 12px;
+    margin-right: 10px;
+    width: 55%;
+    position: relative;
+    transition: 0.3s;
+}
+
+#artists-search:focus{
+    border: 1px solid #df3f3f;
+}
+
+#artists-search-clear{
+    background-color: transparent;
+    border: 0;
+    color: #252525;
+    font-weight: bold;
+    position: absolute;
+    left: 920px;
+    display: none;
+}
+
+#artists-search-clear svg{
+    fill: #4e4e4e;
+}
+
+#artists-search-clear:hover{
+    cursor: pointer;
+}
+
+/* artists list */
+
+#artists-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 200px;
+}
+
+/* artist item */
+
+.artists-list-item{
+    width: 20%;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+
+.artists-cover{
+    position: relative;
+    transition: 0.3s;
+}
+
+.artists-cover img{
+    width: 100%;
+    height: 80%;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px #dfdfdf;
+    border-radius: 50%;
+}
+
+.artists-cover:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.artists-cover:hover .artists-buttons{
+    display: flex;
+    margin-bottom: -35px;
+}
+
+.artist-cover:hover .artist-infos{
+    margin-top: -50px;
+}
+
+/* artists buttons */
+
+.artists-buttons{
+    display: flex;
+    position: relative;
+    top: -50px;
+    left: 80px;
+    transition: 0.3s;
+    display: none;
+    margin: 0;
+}
+
+.play-button, .artists-like{
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+    background-color: #FFF;
+    transition: 0.3s;
+    box-shadow: 2px 2px 0 rgb(0 0 0 / 25%);
+}
+
+.play-button{
+    padding: 10px;
+}
+
+.artists-like{
+    padding: 10px;
+}
+.play-button svg{
+    margin-right: 0;
+}
+
+.artists-like svg{
+    margin: 0 1px;
+
+}
+.artists-like path{
+    fill: #df3f3f;
+    fill-opacity: 1;
+    stroke: #df3f3f;
+}
+
+.play-button:hover{
+    cursor: pointer;
+    padding: 12px;
+}
+
+.artists-like:hover{
+    cursor: pointer;
+    padding: 12px;
+}
+
+/*artists infos */
+
+.artist-infos{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.artist-infos a{
+    color: #000;
+}
+
+.artist-name{
+    font-size: 15px;
+}
+
+.artist-name:hover{
+    text-decoration: underline;
+}
+
+.artist-fans{
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.artist-fans:hover{
+    cursor: text;
+}

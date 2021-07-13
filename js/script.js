@@ -8,29 +8,44 @@ function showCloseButton(){
 
 function showNotifications(){
     let notifications = document.getElementById("notifications-content")
-    let userHeader = document.getElementById("user-header")
+    let profile = document.getElementById("profile-navigation")
+
     let playlistContainer= document.getElementById("playlist-container")
+    let userHeader = document.getElementById("user-header")
+    let searchInput = document.getElementById("search")
+
 
     if(notifications.style.display == "block"){
         notifications.style.display = "none"
         userHeader.style.zIndex = "1"
         playlistContainer.style.zIndex = "1"
+        orderMenu.style.zIndex = "1"
+    }else if (profile.style.display == "block"){
+        profile.style.display = "none"
+        notifications.style.display = "block"
     }else{
         notifications.style.display = "block"
         userHeader.style.zIndex = "-1"
         playlistContainer.style.zIndex = "-1"
+        orderMenu.style.zIndex = "-1"
     }
 }
 
 function showProfile(){
     let profile = document.getElementById("profile-navigation")
-    let userHeader = document.getElementById("user-header")
+    let notifications = document.getElementById("notifications-content")
+
     let playlistContainer= document.getElementById("playlist-container")
+    let userHeader = document.getElementById("user-header")
+
 
     if(profile.style.display == "block"){
         profile.style.display = "none"
         userHeader.style.zIndex = "1"
         playlistContainer.style.zIndex = "1"
+    }else if (notifications.style.display == "block"){
+        notifications.style.display = "none"
+        profile.style.display = "block"
     }else{  
         profile.style.display = "block"
         userHeader.style.zIndex = "-1"
@@ -87,18 +102,14 @@ function highlightCurrent(){
 
 function showMenuMore(){
     let menuMore = document.getElementById("menu-more-container")
-    let playlistContainer= document.getElementById("playlist-container")
+
 
     if(menuMore.style.display == "flex"){
         menuMore.style.display = "none"
-        playlistCoonteiner.style.zIndex = "1"
     }else{
         menuMore.style.display = "flex"
-        playlistContainer.style.zIndex = "-1"
     }
-
 }
 
 highlightCurrent()
-
 
