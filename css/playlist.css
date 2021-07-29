@@ -1,3 +1,23 @@
+:root{
+    --primary-bkg-color: #FFF;
+    --secondary-bkg-color: #FFF;
+    --bkg-hover-color: #d4d1d1;
+    --primary-color: #1d1d1d;
+    --secondary-color: #686868;
+    --hover-color: #f14a4a;
+    --border-color: #e3e3e3;
+    --box-shadow-color: #e2e2e2;
+}   
+
+:root .dark-mode{
+    --primary-bkg-color: #121216;
+    --secondary-bkg-color: #191920;
+    --bkg-hover-color: rgb(212, 212, 212, 0.1);
+    --primary-color: #FFF;
+    --border-color: #3f3f3f;
+    --box-shadow-color: rgb(27, 27, 27);
+}
+
 #playlist-container{
     position: relative;
     left: 220px;
@@ -19,7 +39,7 @@
 #playlist-title{
     font-size: 32px;
     font-weight: 600;
-    color: #1d1d1d;
+    color: var(--primary-color);
 }
 /*header nav*/
 
@@ -33,15 +53,15 @@
 /*menu dropdown button*/
 
 .dropdown-button{
-    background-color: #FFF;
+    background-color: var(--primary-bkg-color);
     border-radius: 40px;
-    border: 1px solid #adadad;
+    border: 1px solid var(--border-color);
     padding: 8px 6px;
     margin: 2px;
     text-transform: uppercase;
     font-size: 12px;
     transition: 0.2s;
-    color: #252525;
+    color: var(--primary-color);
 }
 
 .dropdown-button-content{
@@ -58,7 +78,7 @@
 }
 
 .button-container:active{
-    border: 2px solid #c5c5c5;
+    border: 2px solid var(--border-color);
 }
 
 .dropdown-icon{
@@ -67,7 +87,7 @@
 
 .dropdown-button:hover{
     cursor: pointer;
-    background-color: #d1d1d185;
+    background-color: var(--bkg-hover-color);
 }
 
 /* menu dropdown */
@@ -77,13 +97,13 @@
 }
 
 #filter-dropdown-menu, #order-dropdown-menu{
-    box-shadow: 0px 2px 8px #aaa9a9;
+    box-shadow: 0px 2px 8px (var(--box-shadow-color));
     font-size: 14px;
     width: 200px;
-    color: #5e5d5d;
+    color: var(--secondary-color);
     position: absolute;
     top: 35px;
-    background-color: #FFF;
+    background-color: var(--secondary-bkg-color);
     z-index: 1;
     display: none;
 
@@ -121,27 +141,29 @@
 }
 
 .filter-dropdown-item:hover{
-    background-color: #e6e3e3;
+    background-color: var(--bkg-hover-color);
     cursor: pointer;
     color: #252525;
 }
 
 .order-dropdown-item:hover{
-    background-color: #e6e3e3;
+    background-color: var(--bkg-hover-color);
     cursor: pointer;
-    color: #252525;
+    color: var(--primary-color);
 }
 
 /* search input */
 
 #playlist-search{
     border-radius: 3px;
-    border: 1px solid #adadad;
+    border: 1px solid var(--border-color);
     padding: 7px 08px;
     font-size: 12px;
     width: 55%;
     position: relative;
     transition: 0.3s;
+    background-color: var(--primary-bkg-color);
+    color: var(--primary-color);
 }
 
 #playlist-search:focus{
@@ -151,7 +173,7 @@
 #playlist-search-clear{
     background-color: transparent;
     border: 0;
-    color: #252525;
+    color: var(--primary-color);
     font-weight: bold;
     position: absolute;
     right: 165px;
@@ -159,7 +181,7 @@
 }
 
 #playlist-search-clear svg{
-    fill: #4e4e4e;
+    fill: var(--primary-color);
 }
 
 #playlist-search-clear:hover{
@@ -211,8 +233,12 @@
     color: #FFF;
 }
 
+#new-playlist-text{
+    color: var(--primary-color);
+}
+
 #create-playlist:hover{
-    background-color: #ebe7e7;
+    background-color: var(--bkg-hover-color);
     cursor: pointer;
 }
 
@@ -232,7 +258,7 @@
     width: 100%;
     height: 80%;
     border-radius: 4px;
-    box-shadow: 0px 2px 8px #dfdfdf;
+    box-shadow: 0px 2px 8px var(--box-shadow-color);
 }
 
 .playlist-cover:hover img{
@@ -270,10 +296,12 @@
 
 .play-button svg{
     margin-right: 0;
+    fill: #302f2f;
 }
 
 .playlist-option-more-button svg{
     margin: 0 1px;
+    fill: #302f2f;
 }
 
 .play-button:hover{
@@ -296,23 +324,23 @@
     flex-direction: column;
     position: absolute;
     width: 330px;
-    box-shadow: 0px 2px 8px #dfdfdf;
+    box-shadow: 0px 2px 8px var(--box-shadow-color);
     top: -200px;
     left: -80px;
     z-index: 1;
     border-radius: 10px;
     padding: 5px 0;
-    background-color: #FFF;
+    background-color: var(--secondary-bkg-color);
     display: none;
 }
 
 .playlist-options-menu-item{
-    background-color: #fff;
+    background-color: var(--secondary-bkg-color);
 }
 
 .playlist-options-menu-item-btn{
     border: none;
-    background-color: #FFF;
+    background-color: var(--secondary-bkg-color);
     color: #777575;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
@@ -322,7 +350,7 @@
 }
 
 .playlist-options-menu-item-btn:hover{
-    background-color: #ebe7e7;
+    background-color: var(--bkg-hover-color);
     cursor: pointer;
 }
 
@@ -341,7 +369,7 @@
 }
 
 .playlist-infos a{
-    color: #000;
+    color: var(--primary-color);
 }
 
 .playlist-name{
@@ -355,8 +383,12 @@
 .playlist-access-specifier{
     font-size: 12px;
     margin-top: 8px;
+    color: var(--secondary-color);
 }
 
 .playlist-access-specifier:hover{
     cursor: text;
 }
+
+/*dark mode*/
+

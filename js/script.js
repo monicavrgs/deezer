@@ -69,13 +69,19 @@ function activateKidsMode(){
 function activateNightMode(){
     let nightMode = document.getElementById("night-activate")
     let nightModeInput = document.getElementById("night-activate-input")
+    let logo = document.getElementById("logo");
 
-    if(nightModeInput.checked == true){
-        nightModeInput.checked = false
-        nightMode.classList.remove("label-input-checked")
-    }else{
+    let bodyDocument = document.body
+
+    nightMode.classList.toggle("label-input-checked")
+    bodyDocument.classList.toggle("dark-mode")
+
+    if(nightModeInput.checked == false){
         nightModeInput.checked = true
-        nightMode.classList.add("label-input-checked")
+        logo.src = "../img/deezer-logo-white.png"
+    }else{
+        nightModeInput.checked = false
+        logo.src = "../img/deezer-logo.png"
     }
 }
 
@@ -108,6 +114,7 @@ function showMenuMore(){
         menuMore.style.display = "none"
     }else{
         menuMore.style.display = "flex"
+        menuMore.style.zIndex = "3"
     }
 }
 

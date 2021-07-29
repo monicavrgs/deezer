@@ -48,7 +48,7 @@ function searchPlaylist(){
               playlist[i].style.display = "flex"
             }else{
                 playlist[i].style.display = 'none'
-           }
+            }
       }      
     })    
 }

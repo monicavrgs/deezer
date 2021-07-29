@@ -1,12 +1,56 @@
+:root{
+    --primary-bkg-color: #FFF;
+    --secondary-bkg-color: #FFF;
+    --bkg-hover-color: #d4d4d4;
+    --primary-color: #1d1d1d;
+    --secondary-color: #686868;
+    --hover-color: #f14a4a;
+    --border-color: #e3e3e3;
+    --box-shadow-color: #e2e2e2;
+}   
+
+:root .dark-mode{
+    --primary-bkg-color: #121216;
+    --secondary-bkg-color: #191920;
+    --bkg-hover-color: rgb(212, 212, 212, 0.2);
+    --primary-color: #FFF;
+    --border-color: #3f3f3f;
+    --box-shadow-color: rgb(27, 27, 27);
+}
+
 body{
     font-family: 'Circular-Loom';
     position: relative;
     overflow-x: hidden;
     font-kerning: inherit;
+    background-color: var(--primary-bkg-color);
 }
 
 input:focus{
     outline: none; 
+}
+
+::-webkit-scrollbar{
+    background: var(--secondary-bkg-color);
+    border-left: 1px solid var(--border-color);
+    width: 13px;
+
+}
+::-webkit-scrollbar-thumb{
+    background: #d6d6d67a;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+    background: #b3b3b3;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 /*topbar*/
@@ -19,9 +63,9 @@ input:focus{
     width: 85%;
     padding: 10px;
     font-size: 12px;
-    border-bottom: 1px solid #f3f3f3;
-    border-left: 1px solid #f3f3f3;;
-    background-color: #FFF;
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    background-color: var(--primary-bkg-color);
     z-index: 2;
 }
 
@@ -29,7 +73,7 @@ input:focus{
 
 #topbar-search, #search-input, #search-clear{
     border: none;
-    background-color: #FFF;
+    background-color: var(--primary-bkg-color);
 }
 
 #search-form{
@@ -47,19 +91,14 @@ input:focus{
 #search-input{
     font-size: 17px;
     width: 70%;
-}
-
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-  appearance: none;
+    color: var(--primary-color)
 }
 
 #search-clear{
     font-family: 'Circular-Loom';
     font-kerning: none;
     float: right;
-    background-color: #ebebeb;
+    background-color: rgb(235, 235, 235, 0.4);
     border-radius: 50%;
     padding: 7px 0;
     color: #FFF;
@@ -74,14 +113,10 @@ input:focus{
 }
 
 #search-clear:hover{
-    background-color: #adacac;
+    background-color: var(--bkg-hover-color);
     cursor: pointer;
 }
 
-#search-clear:active{
-    background-color: #adacac;
-    cursor: pointer;
-}
 /* notifications & profile*/
 
 /*icons */
@@ -96,7 +131,7 @@ input:focus{
 #notifications-icon, #topbar-profile-pic{
     border: 0;
     border-radius: 50%;
-    background-color: #FFF;
+    background-color: var(--primary-bkg-color);
 }
 
 #notifications-icon{
@@ -107,7 +142,7 @@ input:focus{
 
 #notifications-icon svg{
     margin-right: 0;
-    color: #474646;
+    color: var(--secondary-color);
 }
 
 #notifications-icon-number{
@@ -122,13 +157,13 @@ input:focus{
 }
 
 #notifications-icon:hover{
-    background-color: #e7e7e7;
+    background-color: rgb(212, 212, 212, 0.2);
     cursor: pointer;
 }
 
 #profile-icon{
     border:none;
-    background-color: #fff;
+    background-color: var(--primary-bkg-color);
 }
 
 #profile-icon:hover{
@@ -150,33 +185,17 @@ input:focus{
 #notifications-content, #profile-navigation{
     width: 375px;
     border-radius: 10px;
-    box-shadow: 0px 2px 8px #dfdfdf;
-    background-color: #FFF;
+    box-shadow: 0px 2px 4px var(--box-shadow-color);
+    background-color: var(--secondary-bkg-color);
     top: 48px;
     right: -5px;
     display: none;
-    color: #2c2c2c;
+    color: var(--primary-color);
 }
 
 #notifications-container{
     overflow-y: scroll;
     max-height: 400px;
-}
-
-/* profile hidden menu scrollbar */
-
-::-webkit-scrollbar{
-    width: 12px;
-    background: #f1f1f17a;
-    border-left: 1px solid #f3f3f3;
-}
-::-webkit-scrollbar-thumb{
-    background: #d6d6d67a;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background: #b3b3b3;
 }
 
 
@@ -187,17 +206,17 @@ input:focus{
     text-align: left;
     font-size: 16px;
     font-weight: bold;
-    border-bottom: solid 1px #f3f3f3;
+    border-bottom: solid 1px var(--border-color);
 }
 
 .notifications-item{
-    border-bottom: solid 1px #f3f3f3;
+    border-bottom: solid 1px var(--border-color);
     padding: 5px 5px 0 5px;
     transition-property: background-color;
 }
 
 .notifications-item:hover{
-    background-color: #e4e3e3;
+    background-color: var(--bkg-hover-color);
 }
 
 .notifications-album{
@@ -217,7 +236,7 @@ input:focus{
     border-radius: 3px;
     width: 63px;
     height: 63px;
-    box-shadow: 0px 2px 8px #dfdfdf;
+    box-shadow: 0px 2px 8px var(--box-shadow-color);
 }
 
 .notifications-album-cover:hover{
@@ -226,13 +245,12 @@ input:focus{
 
 .notifications-album-name{
     font-size: 16px;
-    color: #000;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 .notifications-album-name:hover{
     cursor: pointer;
-    color: #000;
     text-decoration: underline;
 }
 
@@ -246,7 +264,7 @@ input:focus{
 
     font-size:  12px;
     text-transform: uppercase;
-    color: #8b8a8a;
+    color: var(--secondary-color);
 }
 
 /*profile info */
@@ -257,12 +275,12 @@ input:focus{
     display: flex;
     align-items: center;
     padding: 15px;
-    border-bottom: solid 1px #f5f5f5;
+    border-bottom: solid 1px var(--border-color);
 }
 
 #profile-header:hover{
     cursor: pointer;
-    background-color: #e7e7e7;
+    background-color: var(--bkg-hover-color);
 }
 
 #header-user{
@@ -276,13 +294,13 @@ input:focus{
 #profile-user{
     margin: 0 10px;
     align-self: center;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #profile-options{
     font-size: 15px;
     padding: 8px 0;
-    color: #4e4e4e;
+    color: var(--secondary-color);
 
 }
 
@@ -305,12 +323,12 @@ input:focus{
 }
 
 .account-item, .deezer-info svg{
-    color: #4e4e4e; 
+    color: var(--primary-color); 
 }
 
 .account-item:hover{
     cursor: pointer;
-    background-color: #e7e7e7;
+    background-color: var(--bkg-hover-color);
 }
 
 .account-item:hover svg{
@@ -319,13 +337,13 @@ input:focus{
 }
 
 .account-input{
-    border-bottom: solid 1px #f5f5f5;
+    border-bottom: solid 1px var(--border-color);
     display: flex;
     justify-content: space-between;
 }
 
 #kids-mode{
-    border-top: solid 1px #f5f5f5;
+    border-top: solid 1px var(--border-color);
 }
 
 /*label night/kids mode*/
@@ -334,15 +352,11 @@ input:focus{
     width: 32px;
     height: 16px;
     border-radius: 40px;
-    background-color: #dfdfdf;
+    background-color: #c9c8c8;
     display: flex;
     flex-direction: row;
     align-items: center;
     position: relative;
-}
-
-.label-input-checked{
-    background-color: #f14a4a;
 }
 
 .account-input{
@@ -365,13 +379,17 @@ input:focus{
     transition-duration: 0.3s;
 }
 
+.label-input:hover{
+    cursor: pointer;
+}
+
 .label-input-checked::after{
     left: 16px;
     transition-duration: 0.3s;
 }
 
-.label-input:hover{
-    cursor: pointer;
+.label-input-checked{
+    background-color: #f14a4a;
 }
 
 /*deezer info*/
@@ -385,7 +403,7 @@ input:focus{
 
 .deezer-info:hover{
     cursor: pointer;
-    background-color: #e7e7e7;
+    background-color: var(--bkg-hover-color);
 }
 
 .deezer-info:hover svg{
@@ -401,7 +419,8 @@ input:focus{
     position: fixed;
     width: 220px;
     height: 90%;
-    border-right: 1px solid #f3f3f3;
+    border-right: 1px solid var(--border-color);
+    background-color: var(--secondary-bkg-color);
 }
 
 #sidebar-header{
@@ -419,13 +438,13 @@ input:focus{
     padding: 12px 20px;
     font-size: 16px;
     font-weight: 700;
-    color: #000;
+    color: var(--primary-color);
     transition: 0.2s;
 }
 
 
 .sidebar-item a, svg{
-    color: #000;
+    color: var(--primary-color);
     text-decoration: none;
     vertical-align: middle;
 }
@@ -440,11 +459,11 @@ input:focus{
 }
 
 .sidebar-item:hover a{
-    color: #f14a4a;
+    color: var(--hover-color);
 }
 
 .sidebar-item:hover svg{
-    color: #f14a4a;
+    color: var(--hover-color);
     fill: currentColor;
     stroke: currentColor;
     stroke-width: 0;
@@ -462,7 +481,7 @@ input:focus{
 }
 
 .favorites-item a{
-    color: #4d4c4c;
+    color: var(--secondary-color);
     padding: 0 46px;
 }
 
@@ -471,7 +490,7 @@ input:focus{
 }
 
 .favorites-item:hover a{
-    color: #e45959;
+    color: var(--hover-color);
     text-decoration: none;
 }
 
@@ -487,8 +506,8 @@ input:focus{
     top: 60px;
     left: 220px;
     width: 85%;
-    border-bottom: 1px solid #f3f3f3;
-    color: #1d1d1d;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--primary-color);
 }
 
 #header-user-info{
@@ -501,7 +520,7 @@ input:focus{
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    box-shadow: 0px 2px 8px #dfdfdf;
+    box-shadow: 0px 2px 8px var(--box-shadow-color);
 }
 
 #header-user-content{
@@ -518,6 +537,7 @@ input:focus{
     display: flex;
     padding-bottom: 10px;
     font-size: 12px;
+    color: var(--secondary-color)
 }
 
 #following::before{
@@ -569,7 +589,7 @@ input:focus{
     padding-top: 5px;
     padding-left: 20px;
     font-size: 16px;
-    box-shadow: 0 4px 4px rgb(124 124 124 / 8%);
+    box-shadow: 0 2px 3px var(--box-shadow-color);
 }
 
 #header-nav ul{
@@ -582,7 +602,7 @@ input:focus{
 }
 
 .header-nav-item a{
-    color: #555555;
+    color: var(--secondary-color);
     padding-bottom: 17px;
 }
 
@@ -593,6 +613,7 @@ input:focus{
 .header-nav-item:hover a{
     text-decoration: none;
     border-bottom: solid 2px #505050;
+    color: var(--primary-color);
 }
 
 .current-page-header-nav{
@@ -601,11 +622,11 @@ input:focus{
 
 /*header item menu more*/
 #menu-more-button{
-    color: #555555;
+    color: var(--secondary-color);
 }
 
 #menu-more-button svg{
-    fill: #555555;
+    fill: var(--secondary-color);
 }
 
 #header-nav-more:hover{
@@ -620,7 +641,7 @@ input:focus{
 /*header menu dropdown*/
 
 #menu-more-button{
-    background-color: #FFF;
+    background-color: var(--primary-bkg-color);
     border: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
@@ -646,14 +667,14 @@ input:focus{
 }
 
 #menu-more-content{
-    background-color: #FFF;
+    background-color: var(--secondary-bkg-color);
     color: #727272;
     display: flex;
     flex-direction: column;
     text-align: justify;
     width: 185px;
     font-size: 13px;
-    box-shadow: 0px 2px 8px #aaaaaa;
+    box-shadow: 0px 2px 5px var(--box-shadow-color);
     position: absolute;
     top: 45px;
     right: 5px;
@@ -685,5 +706,7 @@ input:focus{
 }
 
 .menu-more-option:hover{
-    background-color: #e4e3e3;
+    background-color: var(--bkg-hover-color);
 }
+
+

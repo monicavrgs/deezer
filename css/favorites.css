@@ -18,14 +18,16 @@
     --box-shadow-color: rgb(27, 27, 27);
 }
 
-#artists-container{
+#favorites-container{
     position: relative;
     left: 220px;
     top: 60px;
     padding-bottom: 20px;
 }
 
-#artists-header{
+/* favorites header */
+
+#favorites-header{
     display: flex;
     justify-content: space-between;
     padding-left: 40px;
@@ -33,13 +35,54 @@
     padding-right: 200px;
 }
 
-#artists-title{
+/* favorites title + header play button */
+
+#favorites-header-title-button{
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+}
+
+#favorites-title{
     font-size: 32px;
     font-weight: 600;
     color: var(--primary-color);
+    margin-right: 15px;
+    align-self: center;
 }
 
-#artists-nav{
+#favorites-play{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e23131;
+    border: none;
+    border-radius: 40px;
+    padding: 0 40px;
+    color: #FFF;
+    width: 40%;
+    height: 90%;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#favorites-play svg{
+    fill: #fff;
+    position: relative;
+    left: -50px;
+}
+
+#favorites-play-button-text{
+    font-size: 14px;
+}
+
+#favorites-play:hover{
+    cursor: pointer;
+    background-color: #b92222;
+}
+
+#favorites-nav{
     display: flex;
     align-items: center;
     width: 40%;
@@ -90,7 +133,7 @@
 
 #order-dropdown-menu{
     box-shadow: 0px 2px 8px var(--box-shadow-color);
-    font-size: 12px;
+    font-size: 14px;
     width: 200px;
     color: var(--secondary-color);
     position: absolute;
@@ -134,172 +177,124 @@
 
 /* search input */
 
-
-#artists-search{
+#favorites-search{
     border-radius: 3px;
     border: 1px solid var(--border-color);
     background-color: var(--primary-bkg-color);
     color: var(--primary-color);
     padding: 10px 8px;
+    margin-left: 20px;
     font-size: 12px;
-    margin-right: 10px;
     width: 55%;
     position: relative;
     transition: 0.3s;
 }
 
-#artists-search:focus{
+#favorites-search:focus{
     border: 1px solid #df3f3f;
 }
 
-#artists-search-clear:hover{
-    cursor: pointer;
-}
+/* search clear button */
 
-#artists-search-clear{
+#favorites-search-clear{
     background-color: transparent;
     border: 0;
     color: var(--primary-color);
     font-weight: bold;
     position: absolute;
-    left: 920px;
+    left: 78em;
     display: none;
 }
 
-#artists-search-clear svg{
+#favorites-search-clear svg{
     fill: var(--primary-color);
 }
 
-#artists-search-clear:hover{
+#favorites-search-clear:hover{
     cursor: pointer;
 }
-/* artists list */
 
-#artists-list{
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 200px;
+
+#favorites-search-clear svg{
+    fill: var(--primary-color);
 }
 
-/* artist item */
+#favorites-search-clear:hover{
+    cursor: pointer;
+}
 
-.artists-list-item{
-    width: 20%;
+/* table / main */
+
+#favorites-table{
+    margin-left: 45px;
+    margin-right: 205px;
     margin-top: 40px;
-    margin-left: 40px;
-    margin-bottom: 15px;
+    width: 75%;
+    table-layout: fixed;
 }
 
-.artists-cover{
-    position: relative;
-    transition: 0.3s;
-}
 
-.artists-cover img{
-    width: 100%;
-    height: 80%;
-    border-radius: 4px;
-    box-shadow: 0px 2px 8px var(--box-shadow-color);
-    border-radius: 50%;
-}
-
-.artists-cover:hover{
-    opacity: 80%;
-    cursor: pointer;
-}
-
-.artists-cover:hover .artists-buttons{
-    display: flex;
-    margin-bottom: -35px;
-}
-
-.artist-cover:hover .artist-infos{
-    margin-top: -50px;
-}
-
-/* artists buttons */
-
-.artists-buttons{
-    display: flex;
-    position: relative;
-    top: -50px;
-    left: 80px;
-    transition: 0.3s;
-    display: none;
-    margin: 0;
-}
-
-.play-button, .artists-like{
-    border-radius: 50%;
-    text-align: center;
-    padding: 10px;
-    border: none;
-    margin-right: 10px;
-    background-color: #FFF;
-    transition: 0.3s;
-    box-shadow: 2px 2px 0 rgb(0 0 0 / 25%);
-}
-
-.play-button{
-    padding: 10px;
-}
-
-.artists-like{
-    padding: 10px;
-}
-.play-button svg{
-    margin-right: 0;
-    fill: #3b3b3b;
-}
-
-.artists-like svg{
-    margin: 0 1px;
-
-}
-.artists-like path{
-    fill: #df3f3f;
-    fill-opacity: 1;
-    stroke: #df3f3f;
-}
-
-.play-button:hover{
-    cursor: pointer;
-    padding: 12px;
-}
-
-.artists-like:hover{
-    cursor: pointer;
-    padding: 12px;
-}
-
-/*artists infos */
-
-.artist-infos{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.artist-infos a{
+.favorites-table-head-cell{
+    padding: 20px 0px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 14px;
     color: var(--primary-color);
 }
 
-.artist-name{
-    font-size: 15px;
+.favorites-table-head-cell::before{
+    content: "";
+    margin-left: 15px;
 }
 
-.artist-name:hover{
-    text-decoration: underline;
+.favorites-table-body-cell{
+    padding: 20px 0px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--primary-color);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    
 }
 
-.artist-fans{
-    font-size: 12px;
-    margin-top: 8px;
-    color: var(--secondary-color)
+.favorites-table-body-cell::before{
+    content: "";
+    margin-left: 15px;
 }
 
-.artist-fans:hover{
-    cursor: text;
+.favorites-table-body-cell:not(:first-child){
+    width: 30%;
+}
+
+.favorites-table-body-row:hover{
+    padding: 15px 0px;
+    background-color: var(--bkg-hover-color);
+}
+
+.favorites-table-body-row:hover .favorites-table-cell-number{
+    display: none;
+}
+
+.favorites-table-body-row:hover .favorites-table-cell-play{
+    display: flex;
+    cursor: pointer;
+}
+
+.favorites-table-cell-play{
+    background-color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 6px 7px;
+    position: relative;
+    top: -10px;
+    left: 2px;
+    display: none;
+}
+
+.favorites-table-cell-play svg{
+    fill: #fff; 
+    margin-right: -1px;
+    margin-top: -1px;
 }
