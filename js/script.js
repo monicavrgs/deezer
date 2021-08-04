@@ -70,7 +70,6 @@ function activateNightMode(){
     let nightMode = document.getElementById("night-activate")
     let nightModeInput = document.getElementById("night-activate-input")
     let logo = document.getElementById("logo");
-
     let bodyDocument = document.body
 
     nightMode.classList.toggle("label-input-checked")
@@ -114,7 +113,7 @@ function showMenuMore(){
         menuMore.style.display = "none"
     }else{
         menuMore.style.display = "flex"
-        menuMore.style.zIndex = "3"
+        menuMore.style.zIndex = "4"
     }
 }
 

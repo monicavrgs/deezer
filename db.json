@@ -1,0 +1,262 @@
+{    
+    "albuns":[
+        {
+            "name": "Nada Sem Ela",
+            "artist": "Academia de Berlinda",
+            "img": "/img/albuns/academia-de-berlinda.jpg"
+        },
+        {
+            "name": "Afoxé Oyá Alaxé",
+            "artist": "Afoxé Oyá Alaxé",
+            "img": "/img/albuns/afoxe.jpg"
+        },
+        {
+            "name": "Yours To Keep",
+            "artist": "Albert Hammond Jr",
+            "img": "/img/albuns/albert.jpg"
+        },
+        {
+            "name": "Sete Desejos",
+            "artist": "Alceu Valença",
+            "img": "/img/albuns/alceu.jpg"
+        },
+        {
+            "name": "Submarine - Original Songs From The Film By Alex Turner",
+            "artist": "Alex Turner",
+            "img": "/img/albuns/submarine.jpg"
+        },
+        {
+            "name": "Crux",
+            "artist": "Apeles",
+            "img": "/img/albuns/crux-apeles.jpg"
+        },
+        {
+            "name": "Neon Bible",
+            "artist": "Arcade Fire",
+            "img": "/img/albuns/neon-bible.jpg"
+        },
+        {
+            "name": "Reflektor",
+            "artist": "Arcade Fire",
+            "img": "/img/albuns/reflektor.jpg"
+        },
+        {
+            "name": "The Suburbs",
+            "artist": "Arcade Fire",
+            "img": "/img/albuns/the-suburbs.jpg"
+        },
+        {
+            "name": "Arthur III",
+            "artist": "Arthur III",
+            "img": "/img/albuns/arthur-iii.jpg"
+        },
+        {
+            "name": "Abissal",
+            "artist": "Azura",
+            "img": "/img/albuns/azura.jpg"
+        },
+        {
+            "name": "Badkid",
+            "artist": "Bakar",
+            "img": "/img/albuns/badkid-bakar.jpg"
+        },
+        {
+            "name": "Something I Said",
+            "artist": "Bakar",
+            "img": "/img/albuns/something-i-said-bakar.jpg"
+        },
+        {
+            "name": "Atlas",
+            "artist": "Baleia",
+            "img": "/img/albuns/atlas-baleia.jpg"
+        },
+        {
+            "name": "Coração Fantasma",
+            "artist": "Baleia",
+            "img": "/img/albuns/coracao-fantasma.jpg"
+        },
+        {
+            "name": "Quebra Azul",
+            "artist": "Baleia",
+            "img": "/img/albuns/quebra-azul.jpg"
+        }
+    ],
+    "artists": [
+        {
+            "name": "Afoxé Oyá Alaxé",
+            "fans": "610",
+            "img": "/img/artists/afoxe.jpg" 
+        },
+        {
+            "name": "ÀIYÉ",
+            "fans": "137",
+            "img": "/img/artists/aiye.jpg" 
+        },
+        {
+            "name": "Alceu Valença",
+            "fans": "535.300",
+            "img": "/img/artists/alceu.jpg" 
+        },
+        {
+            "name": "Ale Sater",
+            "fans": "139",
+            "img": "/img/artists/ale-sater.jpg" 
+        },
+        {
+            "name": "Ana Frango Elétrico",
+            "fans": "2.385",
+            "img": "/img/artists/ana-frango-eletrico.jpg" 
+        },
+        {
+            "name": "Ana Muller",
+            "fans": "7.021",
+            "img": "/img/artists/ana-muller.jpg" 
+        },
+        {
+            "name": "Anelis Assumpção",
+            "fans": "14.759",
+            "img": "/img/artists/anelis.jpg" 
+        },
+        {
+            "name": "Angel Olsen",
+            "fans": "17.654",
+            "img": "/img/artists/angel-olsen.jpg" 
+        },
+        {
+            "name": "Animal Collective",
+            "fans": "58.795",
+            "img": "/img/artists/animal-collective.jpg" 
+        },
+        {
+            "name": "Apeles",
+            "fans": "148",
+            "img": "/img/artists/apeles.jpg" 
+        },
+        {
+            "name": "Arcade Fire",
+            "fans": "576.906",
+            "img": "/img/artists/arcade fire.jpg" 
+        }
+    ],
+
+    "favorites":[
+        {
+            "name": "Afterlife",
+            "album": "Reflektor",
+            "artist": "Arcade Fire",
+            "duration": "05:52",
+            "date": "08/02/2017"
+        },
+        {
+            "name": "Top Man",
+            "album": "The Great Escape",
+            "artist": "Blur",
+            "duration": "04:00",
+            "date": "23/02/2017"
+        },
+        {
+            "name": "Pedra Preta",
+            "album": "Pedra Preta",
+            "artist": "Teto Preto",
+            "duration": "05:51",
+            "date": "26/07/2019"
+        },
+        {
+            "name": "Dádiva",
+            "album": "Pedaço Vivo",
+            "artist": "Tágua Tágua",
+            "duration": "04:26",
+            "date": "27/07/2019"
+        },
+        {
+            "name": "Meeting Paris Hilton",
+            "album": "Cansei de Ser Sexy",
+            "artist": "CSS",
+            "duration": "03:11",
+            "date": "25/03/2020"
+        },
+        {
+            "name": "Cordeiro de Nanã",
+            "album": "Os Tincoãs",
+            "artist": "Os Tincoãs",
+            "duration": "02:57",
+            "date": "11/11/2020"
+        },
+        {
+            "name": "Pequenas Alegrias da Vi...",
+            "album": "AmarElo",
+            "artist": "Emicida",
+            "duration": "04:52",
+            "date": "04/07/2021"
+        },
+        {
+            "name": "Diabo Apaixonado",
+            "album": "Traz a Pessoa Amada em...",
+            "artist": "Canastra",
+            "duration": "03:13",
+            "date": "11/07/2021"
+        }
+    ],
+    "playlists": [
+        {
+            "name": "1",
+            "type": "Pública",
+            "img": "/img/playlist/1.jpg"
+        },
+        {
+            "name": "Apesar De Você",
+            "type": "Pública",
+            "img": "/img/playlist/apesar-de-voce.jpg"
+        },
+        {
+            "name": "Bloco Truck Do Desejo",
+            "type": "Pública",
+            "img": "/img/playlist/bloco-truck.jpg"
+        },
+        {
+            "name": "Brasil Anos 70",
+            "type": "Pública",
+            "img": "/img/playlist/br-anos-70.jpg"
+        },
+        {
+            "name": "fechadinha do ano",
+            "type": "Pública",
+            "img": "/img/playlist/fechadinha-do-ano.jpg"
+        },
+        {
+            "name": "oi",
+            "type": "Pública",
+            "img": "/img/playlist/oi.jpg"
+        },
+        {
+            "name": "playlist topster dos indie br",
+            "type": "Pública",
+            "img": "/img/playlist/indie-br.jpg"
+        },
+        {
+            "name": "Pontos - Exú e Pomba Gira",
+            "type": "Pública",
+            "img": "/img/playlist/pontos-exu.jpg"
+        },
+        {
+            "name": "Tágua Tágua",
+            "type": "Pública",
+            "img": "/img/playlist/tagua-tagua.jpg"
+        },
+        {
+            "name": "tim maia só as braba",
+            "type": "Pública",
+            "img": "/img/playlist/tim-maia.jpg"
+        },
+        {
+            "name": "Truck do desejo - a playlist",
+            "type": "Pública",
+            "img": "/img/playlist/bloco-truck.jpg"
+        },
+        {
+            "name": "viradinha das good vibe",
+            "type": "Pública",
+            "img": "/img/playlist/viradinha.jpg"
+        }
+    ]
+}

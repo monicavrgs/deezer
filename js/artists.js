@@ -50,7 +50,7 @@ function showOrderMenu(){
         searchInput.style.zIndex = "-1"
     }else{
         orderMenu.style.display = "none"
-        searchInput.style.zIndex = "1"
+        searchInput.style.zIndex = "0"
     }
 }
 

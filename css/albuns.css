@@ -153,7 +153,6 @@
 #albuns-search-clear{
     background-color: transparent;
     border: 0;
-    color: var(--primary-bkg-color);
     font-weight: bold;
     position: absolute;
     left: 920px;
@@ -161,7 +160,7 @@
 }
 
 #albuns-search-clear svg{
-    fill: var(--primary-color);
+    fill: var(--secondary-color);
 }
 
 #albuns-search-clear:hover{

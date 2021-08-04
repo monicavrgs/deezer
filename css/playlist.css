@@ -173,7 +173,6 @@
 #playlist-search-clear{
     background-color: transparent;
     border: 0;
-    color: var(--primary-color);
     font-weight: bold;
     position: absolute;
     right: 165px;
@@ -181,7 +180,7 @@
 }
 
 #playlist-search-clear svg{
-    fill: var(--primary-color);
+    fill: var(--secondary-color);
 }
 
 #playlist-search-clear:hover{

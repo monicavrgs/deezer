@@ -265,7 +265,7 @@
 
     <section id='page-sidebar'>
         <div id='sidebar-header'>
-            <a href="#"><img src="../img/deezer-logo.png" alt="deezer-logo"></a>
+            <a href="#"><img src="../img/deezer-logo.png" alt="deezer-logo" id='logo'></a>
         </div>
 
         <ul id='sidebar-content'>
@@ -303,228 +303,111 @@
         </ul>
     </section>
 
-    <section id='user-header'>
-        <div id='header-user-info'>
-            <img src="../img/user.jpg" alt="" id='header-user-pic'>
-            <div id='header-user-content'>
-                <h2 id='header-title'>monivrgs</h2>
-                    <ul id='follows'>
-                        <li class='follows-item' id='followers'>1 seguidor</li>
-                        <li class='follows-item' id='following'>1 seguindo</li>
-                    </ul>
-                <div id='header-random-button'>
-                    <button id='header-random'>
-                    <span><svg class="svg-icon svg-icon-shuffle" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.333 9.214h-.666C6.826 9.214 5.333 7.775 5.333 6c0-1.066-.894-1.929-2-1.929H.683C.298 4.071 0 3.784 0 3.43c0-.356.298-.643.667-.729.137 0 2.65.01 2.666 0 1.841.086 3.334 1.525 3.334 3.3 0 1.065.896 1.929 2 1.929h3c.185 0 .333.143.333.321v.321L9.333 10.5V9.214zm-.666-5.143c-.367 0-.708.103-1.004.27a4.497 4.497 0 0 0-.672-1.104c.493-.28 1.062-.451 1.709-.537.013.03.51 0 .6 0V1.5L12 3.429v.321a.327.327 0 0 1-.333.321h-3zM3.333 7.93c.369 0 .709-.103 1.004-.27.168.404.4.767.672 1.104-.493.28-1.062.451-1.676.537-.018-.011-2.435 0-2.666 0C.298 9.214 0 8.927 0 8.571c0-.355.298-.642.667-.642h2.666z"></path></svg>
+    <section id='favorties-container'>
 
-                    <span id='random-text'>Minha música - Aleatório</span>
+        <section id='user-header'>
+            <div id='header-user-info'>
+                <img src="../img/user.jpg" alt="" id='header-user-pic'>
+                <div id='header-user-content'>
+                    <h2 id='header-title'>monivrgs</h2>
+                        <ul id='follows'>
+                            <li class='follows-item' id='followers'>1 seguidor</li>
+                            <li class='follows-item' id='following'>1 seguindo</li>
+                        </ul>
+                    <div id='header-random-button'>
+                        <button id='header-random'>
+                        <span><svg class="svg-icon svg-icon-shuffle" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.333 9.214h-.666C6.826 9.214 5.333 7.775 5.333 6c0-1.066-.894-1.929-2-1.929H.683C.298 4.071 0 3.784 0 3.43c0-.356.298-.643.667-.729.137 0 2.65.01 2.666 0 1.841.086 3.334 1.525 3.334 3.3 0 1.065.896 1.929 2 1.929h3c.185 0 .333.143.333.321v.321L9.333 10.5V9.214zm-.666-5.143c-.367 0-.708.103-1.004.27a4.497 4.497 0 0 0-.672-1.104c.493-.28 1.062-.451 1.709-.537.013.03.51 0 .6 0V1.5L12 3.429v.321a.327.327 0 0 1-.333.321h-3zM3.333 7.93c.369 0 .709-.103 1.004-.27.168.404.4.767.672 1.104-.493.28-1.062.451-1.676.537-.018-.011-2.435 0-2.666 0C.298 9.214 0 8.927 0 8.571c0-.355.298-.642.667-.642h2.666z"></path></svg>
+
+                        <span id='random-text'>Minha música - Aleatório</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <nav id='header-nav'>
+                <ul>
+                    <li class='header-nav-item'><a href="highlights.html" class="header-nav-link">Destaques</a></li>
+                    <li class='header-nav-item'><a href="favorites.html" class="header-nav-link">Mais queridas</a></li>
+                    <li class='header-nav-item'><a href="playlist.html" class="header-nav-link">Playlists</a></li>
+                    <li class='header-nav-item'><a href="albuns.html" class="header-nav-link">Álbuns</a></li>
+                    <li class='header-nav-item'><a href="artists.html" class="header-nav-link">Artistas</a></li>
+                    <li class='header-nav-item'><a href="podcasts.html" class="header-nav-link">Podcasts</a></li>
+                    <li id='header-nav-more' class='header-nav-item'>
+                        <button href="" id='menu-more-button' onclick="showMenuMore()">Mais<svg class="svg-icon svg-icon-sort-desc" focusable="false" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true"><path d="M5.997 8.5L2.5 3.507l7-.007z"></path></svg></>
+                        <div id='menu-more-container'>
+                            <ul id='menu-more-content'>
+                                <li class='menu-more-option'>Histórico de reprodução</li>
+                                <li class='menu-more-option'>Mixes</li>
+                                <li class='menu-more-option'>Meus MP3</li>
+                                <li class='menu-more-option'>Seguindo</li>
+                                <li class='menu-more-option'>Seguidores</li>
+                            </ul>
+                        </div>
+                    </li>
+                    </div>
+                </ul>
+            </nav>
+        </section>
+
+        <section id='favorites-container'>
+            <div id='favorites-header'>
+            
+            <div id='favorites-header-title-button'>
+                    <h2 id='favorites-title'>8 mais queridas</h2>
+                    <button id="favorites-play">
+                        <span id='favorites-play-button-svg'><svg class="svg-icon svg-icon-play-circle" focusable="false" height="14" width="14" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 11A5 5 0 1 0 6 1a5 5 0 0 0 0 10zm0 1A6 6 0 1 1 6 0a6 6 0 0 1 0 12zM4.937 4.017a.125.125 0 0 0-.187.108v3.75c0 .096.104.156.187.108l3.25-1.875a.125.125 0 0 0 0-.216l-3.25-1.875z"></path></svg></span>
+                        <span id="favorites-play-button-text">Ouvir</span>
                     </button>
                 </div>
-            </div>
-        </div>
+                <div id='favorites-nav'>
 
-        <nav id='header-nav'>
-            <ul>
-                <li class='header-nav-item'><a href="highlights.html" class="header-nav-link">Destaques</a></li>
-                <li class='header-nav-item'><a href="favorites.html" class="header-nav-link">Mais queridas</a></li>
-                <li class='header-nav-item'><a href="playlist.html" class="header-nav-link">Playlists</a></li>
-                <li class='header-nav-item'><a href="albuns.html" class="header-nav-link">Álbuns</a></li>
-                <li class='header-nav-item'><a href="artists.html" class="header-nav-link">Artistas</a></li>
-                <li class='header-nav-item'><a href="podcasts.html" class="header-nav-link">Podcasts</a></li>
-                <li id='header-nav-more' class='header-nav-item'>
-                    <button href="" id='menu-more-button' onclick="showMenuMore()">Mais<svg class="svg-icon svg-icon-sort-desc" focusable="false" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true"><path d="M5.997 8.5L2.5 3.507l7-.007z"></path></svg></>
-                    <div id='menu-more-container'>
-                        <ul id='menu-more-content'>
-                            <li class='menu-more-option'>Histórico de reprodução</li>
-                            <li class='menu-more-option'>Mixes</li>
-                            <li class='menu-more-option'>Meus MP3</li>
-                            <li class='menu-more-option'>Seguindo</li>
-                            <li class='menu-more-option'>Seguidores</li>
+                    <div id='order-dropdown'>
+                        <div class='button-container'>
+                            <button id='order-button' class='dropdown-button' onclick='showOrderMenu()'>
+                                <span id='order-button-content' class='dropdown-button-content'>Manual<svg class="svg-icon svg-icon-chevron-down dropdown-icon" id="order-button-svg" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6.013 8.998a.61.61 0 0 0 .416-.169l2.661-2.1 2.662-2.102c.654-.517-.12-1.498-.775-.981l-2.483 1.96-2.482 1.96-4.99-3.921c-.656-.515-1.428.468-.773.983L5.597 8.83a.61.61 0 0 0 .416.168z"></path></svg></span>
+                            </button> 
+                        </div>  
+
+                        <ul id="order-dropdown-menu">
+                            <li class='order-dropdown-item'>Adicionados recentes</li>
+                            <li class='order-dropdown-item'>A-Z(faixa)</li>
+                            <li class='order-dropdown-item'>A-Z(artista)</li>
+                            <li class='order-dropdown-item'>A-Z(album)</li>
+                            <li class='order-dropdown-item'>Manual</li>
                         </ul>
                     </div>
-                </li>
+
+                    <input type="search" name="favorites-search" id="favorites-search" placeholder="Buscar nas faixas" oninput="closeSearchButton()">    
+
+                    <button id='favorites-search-clear' onclick="clearInput()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="close"><rect width="12" height="12" transform="rotate(180 12 12)" opacity="0"/><path d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/></g></g></svg>
+                    </button>            
                 </div>
-            </ul>
-        </nav>
-    </section>
-
-    <section id='favorites-container'>
-        <div id='favorites-header'>
-           
-           <div id='favorites-header-title-button'>
-                <h2 id='favorites-title'>8 mais queridas</h2>
-                <button id="favorites-play">
-                    <span id='favorites-play-button-svg'><svg class="svg-icon svg-icon-play-circle" focusable="false" height="14" width="14" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 11A5 5 0 1 0 6 1a5 5 0 0 0 0 10zm0 1A6 6 0 1 1 6 0a6 6 0 0 1 0 12zM4.937 4.017a.125.125 0 0 0-.187.108v3.75c0 .096.104.156.187.108l3.25-1.875a.125.125 0 0 0 0-.216l-3.25-1.875z"></path></svg></span>
-                    <span id="favorites-play-button-text">Ouvir</span>
-                </button>
             </div>
-            <div id='favorites-nav'>
+            
+            <table id='favorites-table'>
+                <thead id='favorites-table-head'>
+                    <tr id='favorites-table-head-row'>
+                        <th class='favorites-table-head-cell'>#</th>
+                        <th class='favorites-table-head-cell'>Faixa</th>
+                        <th class='favorites-table-head-cell'>Artista</th>
+                        <th class='favorites-table-head-cell'>Álbum</th>
+                        <th class='favorites-table-head-cell'>D.</th>
+                        <th class='favorites-table-head-cell'>Adicionado</th>
+                        <th class='favorites-table-head-cell'>
+                            <input type="checkbox" name="" id="favorites-table-head-checkbox">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id='favorites-table-body'>
 
-                <div id='order-dropdown'>
-                    <div class='button-container'>
-                        <button id='order-button' class='dropdown-button' onclick='showOrderMenu()'>
-                            <span id='order-button-content' class='dropdown-button-content'>Manual<svg class="svg-icon svg-icon-chevron-down dropdown-icon" id="order-button-svg" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6.013 8.998a.61.61 0 0 0 .416-.169l2.661-2.1 2.662-2.102c.654-.517-.12-1.498-.775-.981l-2.483 1.96-2.482 1.96-4.99-3.921c-.656-.515-1.428.468-.773.983L5.597 8.83a.61.61 0 0 0 .416.168z"></path></svg></span>
-                        </button> 
-                    </div>  
-
-                    <ul id="order-dropdown-menu">
-                        <li class='order-dropdown-item'>Adicionados recentes</li>
-                        <li class='order-dropdown-item'>A-Z(faixa)</li>
-                        <li class='order-dropdown-item'>A-Z(artista)</li>
-                        <li class='order-dropdown-item'>A-Z(album)</li>
-                        <li class='order-dropdown-item'>Manual</li>
-                    </ul>
-                </div>
-
-                <input type="search" name="favorites-search" id="favorites-search" placeholder="Buscar nas faixas" oninput="closeSearchButton()">    
-
-                <button id='favorites-search-clear' onclick="clearInput()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="close"><rect width="12" height="12" transform="rotate(180 12 12)" opacity="0"/><path d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/></g></g></svg>
-                </button>            
-            </div>
-        </div>
-        
-        <table id='favorites-table'>
-            <thead id='favorites-table-head'>
-                <tr id='favorites-table-head-row'>
-                    <th class='favorites-table-head-cell'>#</th>
-                    <th class='favorites-table-head-cell'>Faixa</th>
-                    <th class='favorites-table-head-cell'>Artista</th>
-                    <th class='favorites-table-head-cell'>Álbum</th>
-                    <th class='favorites-table-head-cell'>D.</th>
-                    <th class='favorites-table-head-cell'>Adicionado</th>
-                    <th class='favorites-table-head-cell'>
-                        <input type="checkbox" name="" id="favorites-table-head-checkbox">
-                    </th>
-                </tr>
-            </thead>
-            <tbody id='favorites-table-body'>
-                <tr class='favorites-table-body-row'>
-                    <td class= 'favorites-table-body-cell'>
-                        <span class='favorites-table-cell-number'>1</span>
-                        <button class='favorites-table-cell-play'>
-                            <svg class="svg-icon svg-icon-play" focusable="false" height="10" width="10" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
-                        </button>
-                    </td>
-                    <td class= 'favorites-table-body-cell'>Afterlife</td>
-                    <td class= 'favorites-table-body-cell'>Arcade Fire</td>
-                    <td class= 'favorites-table-body-cell'>Reflektor</td>
-                    <td class= 'favorites-table-body-cell'>05:52</td>
-                    <td class= 'favorites-table-body-cell'>08/02/2017</td>
-                    <td class= 'favorites-table-body-cell'>
-                        <input type="checkbox" name="" id="" class='favorites-table-body-checkbox'>
-                    </td>
-                </tr>
-                <tr class='favorites-table-body-row'>
-                    <td class= 'favorites-table-body-cell'>
-                        <span class='favorites-table-cell-number'>2</span>
-                        <button class='favorites-table-cell-play'>
-                            <svg class="svg-icon svg-icon-play" focusable="false" height="10" width="10" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
-                        </button>
-                    </td>
-                    <td class= 'favorites-table-body-cell'>Top Man</td>
-                    <td class= 'favorites-table-body-cell'>Blur</td>
-                    <td class= 'favorites-table-body-cell'>The Great Escape</td>
-                    <td class= 'favorites-table-body-cell'>04:00</td>
-                    <td class= 'favorites-table-body-cell'>23/02/2017</td>
-                    <td class= 'favorites-table-body-cell'>
-                        <input type="checkbox" name="" id="" class='favorites-table-body-checkbox'>
-                    </td>
-                </tr>
-                <tr class='favorites-table-body-row'>
-                    <td class= 'favorites-table-body-cell'>
-                        <span class='favorites-table-cell-number'>3</span>
-                        <button class='favorites-table-cell-play'>
-                            <svg class="svg-icon svg-icon-play" focusable="false" height="10" width="10" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
-                        </button>
-                    </td>                    <td class= 'favorites-table-body-cell'>Pedra Preta</td>
-                    <td class= 'favorites-table-body-cell'>Teto Preto</td>
-                    <td class= 'favorites-table-body-cell'>Pedra Preta</td>
-                    <td class= 'favorites-table-body-cell'>05:51</td>
-                    <td class= 'favorites-table-body-cell'>26/07/2019</td>
-                    <td class= 'favorites-table-body-cell'>
-                        <input type="checkbox" name="" id="" class='favorites-table-body-checkbox'>
-                    </td>
-                </tr>
-                <tr class='favorites-table-body-row'>
-                    <td class= 'favorites-table-body-cell'>
-                        <span class='favorites-table-cell-number'>4</span>
-                        <button class='favorites-table-cell-play'>
-                            <svg class="svg-icon svg-icon-play" focusable="false" height="10" width="10" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
-                        </button>
-                    </td>                    <td class= 'favorites-table-body-cell'>Dádiva</td>
-                    <td class= 'favorites-table-body-cell'>Tagua Tagua</td>
-                    <td class= 'favorites-table-body-cell'>Pedaço Vivo</td>
-                    <td class= 'favorites-table-body-cell'>04:26</td>
-                    <td class= 'favorites-table-body-cell'>27/07/2019</td>
-                    <td class= 'favorites-table-body-cell'>
-                        <input type="checkbox" name="" id="" class='favorites-table-body-checkbox'>
-                    </td>
-                </tr>
-                <tr class='favorites-table-body-row'>
-                    <td class= 'favorites-table-body-cell'>
-                        <span class='favorites-table-cell-number'>5</span>
-                        <button class='favorites-table-cell-play'>
-                            <svg class="svg-icon svg-icon-play" focusable="false" height="10" width="10" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
-                        </button>
-                    </td>                    <td class= 'favorites-table-body-cell'>Metting Paris Hilton</td>
-                    <td class= 'favorites-table-body-cell'>CSS</td>
-                    <td class= 'favorites-table-body-cell'>Cansei de Ser Sexy</td>
-                    <td class= 'favorites-table-body-cell'>03:11</td>
-                    <td class= 'favorites-table-body-cell'>25/03/2020</td>
-                    <td class= 'favorites-table-body-cell'>
-                        <input type="checkbox" name="" id="" class='favorites-table-body-checkbox'>
-                    </td>
-                </tr>
-                <tr class='favorites-table-body-row'>
-                    <td class= 'favorites-table-body-cell'>
-                        <span class='favorites-table-cell-number'>6</span>
-                        <button class='favorites-table-cell-play'>
-                            <svg class="svg-icon svg-icon-play" focusable="false" height="10" width="10" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
-                        </button>
-                    </td>                    <td class= 'favorites-table-body-cell'>Cordeiro de Nanã</td>
-                    <td class= 'favorites-table-body-cell'>Os Tincoãs</td>
-                    <td class= 'favorites-table-body-cell'>Os Tincoãs</td>
-                    <td class= 'favorites-table-body-cell'>02:57</td>
-                    <td class= 'favorites-table-body-cell'>11/11/2020</td>
-                    <td class= 'favorites-table-body-cell'>
-                        <input type="checkbox" name="" id="" class='favorites-table-body-checkbox'>
-                    </td>
-                </tr>
-                <tr class='favorites-table-body-row'>
-                    <td class= 'favorites-table-body-cell'>
-                        <span class='favorites-table-cell-number'>7</span>
-                        <button class='favorites-table-cell-play'>
-                            <svg class="svg-icon svg-icon-play" focusable="false" height="10" width="10" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
-                        </button>
-                    </td>                    <td class= 'favorites-table-body-cell'>Pequenas Alegrias da Vi..</td>
-                    <td class= 'favorites-table-body-cell'>Emicida</td>
-                    <td class= 'favorites-table-body-cell'>AmarElo</td>
-                    <td class= 'favorites-table-body-cell'>04:52</td>
-                    <td class= 'favorites-table-body-cell'>04/07/2021</td>
-                    <td class= 'favorites-table-body-cell'>
-                        <input type="checkbox" name="" id="" class='favorites-table-body-checkbox'>
-                    </td>
-                </tr>
-                <tr class='favorites-table-body-row'>
-                    <td class= 'favorites-table-body-cell'>
-                        <span class='favorites-table-cell-number'>8</span>
-                        <button class='favorites-table-cell-play'>
-                            <svg class="svg-icon svg-icon-play" focusable="false" height="10" width="10" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
-                        </button>
-                    </td>                    <td class= 'favorites-table-body-cell'>Diabo Apaixonado</td>
-                    <td class= 'favorites-table-body-cell'>Canastra</td>
-                    <td class= 'favorites-table-body-cell'>Traz a Pessoa Amada em...</td>
-                    <td class= 'favorites-table-body-cell'>03:13</td>
-                    <td class= 'favorites-table-body-cell'>11/07/2021</td>
-                    <td class= 'favorites-table-body-cell'>
-                        <input type="checkbox" name="" id="" class='favorites-table-body-checkbox'>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </section>
     </section>
 
     <script src="../js/script.js"></script>
     <script src="../js/favorites.js"></script>
+    <script src="../js/favorites_list.js"></script>
 </body>
 </html>

@@ -152,14 +152,10 @@
     border: 1px solid #df3f3f;
 }
 
-#artists-search-clear:hover{
-    cursor: pointer;
-}
 
 #artists-search-clear{
     background-color: transparent;
     border: 0;
-    color: var(--primary-color);
     font-weight: bold;
     position: absolute;
     left: 920px;
@@ -167,7 +163,7 @@
 }
 
 #artists-search-clear svg{
-    fill: var(--primary-color);
+    fill: var(--secondary-color);
 }
 
 #artists-search-clear:hover{

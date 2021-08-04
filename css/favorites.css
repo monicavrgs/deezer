@@ -199,7 +199,6 @@
 #favorites-search-clear{
     background-color: transparent;
     border: 0;
-    color: var(--primary-color);
     font-weight: bold;
     position: absolute;
     left: 78em;
@@ -207,16 +206,7 @@
 }
 
 #favorites-search-clear svg{
-    fill: var(--primary-color);
-}
-
-#favorites-search-clear:hover{
-    cursor: pointer;
-}
-
-
-#favorites-search-clear svg{
-    fill: var(--primary-color);
+    fill: var(--secondary-color);
 }
 
 #favorites-search-clear:hover{
