@@ -4,9 +4,9 @@
     --bkg-hover-color: #d4d4d4;
     --primary-color: #1d1d1d;
     --secondary-color: #686868;
-    --hover-color: #f14a4a;
+    --tertiary-color: #f14a4a;
     --border-color: #e3e3e3;
-    --box-shadow-color: #e2e2e2;
+    --box-shadow-color: #aaaaaa;
 }   
 
 :root .dark-mode{
@@ -149,7 +149,7 @@
 }
 
 #artists-search:focus{
-    border: 1px solid #df3f3f;
+    border: 1px solid var(--tertiary-color);
 }
 
 
@@ -225,7 +225,7 @@
     margin: 0;
 }
 
-.play-button, .artists-like{
+.play-button, .artists-like-button{
     border-radius: 50%;
     text-align: center;
     padding: 10px;
@@ -236,13 +236,10 @@
     box-shadow: 2px 2px 0 rgb(0 0 0 / 25%);
 }
 
-.play-button{
+.play-button, .artists-like-button{
     padding: 10px;
 }
 
-.artists-like{
-    padding: 10px;
-}
 .play-button svg{
     margin-right: 0;
     fill: #3b3b3b;
@@ -253,9 +250,9 @@
 
 }
 .artists-like path{
-    fill: #df3f3f;
+    fill: var(--tertiary-color);
     fill-opacity: 1;
-    stroke: #df3f3f;
+    stroke: var(--tertiary-color);
 }
 
 .play-button:hover{
@@ -263,7 +260,7 @@
     padding: 12px;
 }
 
-.artists-like:hover{
+.artists-like-button:hover{
     cursor: pointer;
     padding: 12px;
 }

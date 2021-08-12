@@ -4,9 +4,9 @@
     --bkg-hover-color: #d4d1d1;
     --primary-color: #1d1d1d;
     --secondary-color: #686868;
-    --hover-color: #f14a4a;
+    --tertiary-color: #f14a4a;
     --border-color: #e3e3e3;
-    --box-shadow-color: #e2e2e2;
+    --box-shadow-color: #aaaaaa;
 }   
 
 :root .dark-mode{
@@ -97,7 +97,7 @@
 }
 
 #filter-dropdown-menu, #order-dropdown-menu{
-    box-shadow: 0px 2px 8px (var(--box-shadow-color));
+    box-shadow: 0px 2px 8px var(--box-shadow-color);
     font-size: 14px;
     width: 200px;
     color: var(--secondary-color);
@@ -167,7 +167,7 @@
 }
 
 #playlist-search:focus{
-    border: 1px solid #df3f3f;
+    border: 1px solid  var(--tertiary-color);
 }
 
 #playlist-search-clear{
@@ -212,7 +212,7 @@
     width: 100%;
     height: 100%;;
     border-radius: 5px;
-    border: dotted 1px #df3f3f;
+    border: dotted 1px  var(--tertiary-color);
     font-family: 'Open Sans', sans-serif;
     transition: 0.3s;
 }
@@ -313,51 +313,6 @@
     padding: 12px;
 }
 
-/*playlist options menu dropdown */
-.playlist-more-options{
-    position:relative;
-    border-radius: 5px;
-}
-
-.playlist-options-menu{
-    flex-direction: column;
-    position: absolute;
-    width: 330px;
-    box-shadow: 0px 2px 8px var(--box-shadow-color);
-    top: -200px;
-    left: -80px;
-    z-index: 1;
-    border-radius: 10px;
-    padding: 5px 0;
-    background-color: var(--secondary-bkg-color);
-    display: none;
-}
-
-.playlist-options-menu-item{
-    background-color: var(--secondary-bkg-color);
-}
-
-.playlist-options-menu-item-btn{
-    border: none;
-    background-color: var(--secondary-bkg-color);
-    color: #777575;
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-}
-
-.playlist-options-menu-item-btn:hover{
-    background-color: var(--bkg-hover-color);
-    cursor: pointer;
-}
-
-.playlist-options-menu-item-btn svg{
-    fill: #858585;
-    font-size: 16px;
-}
-
 /*playlist infos */
 
 .playlist-infos{
@@ -389,5 +344,4 @@
     cursor: text;
 }
 
-/*dark mode*/
 

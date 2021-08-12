@@ -51,11 +51,11 @@
 
     <section id='page-topbar'>
         <form action="" id='search-form'>
-            <button id='topbar-search'>
+            <span id='topbar-search-icon'>
                 <svg class="svg-icon svg-icon-search topbar-search-icon" focusable="false" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.827 8.584l1.95 1.951a.879.879 0 0 1-1.242 1.242l-1.95-1.95c-2.137 1.55-5.12 1.383-7.02-.517-2.108-2.108-2.083-5.55.055-7.69C3.76-.518 7.202-.543 9.31 1.565c1.9 1.9 2.067 4.883.517 7.02zm-1.256-.013c1.721-1.72 1.741-4.49.045-6.187C6.92.688 4.15.708 2.429 2.43.708 4.149.688 6.919 2.384 8.616c1.696 1.696 4.466 1.676 6.187-.045z"></path></svg>
-            </button>
+            </span>
             <input type="search" placeholder='Buscar' id="search-input" oninput="showCloseButton()">
-            <button id='search-clear'> 
+            <button id='search-clear-button'> 
                 <svg class="svg-icon svg-icon-cancel topbar-search-icon" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg></button>
         </form>
 
@@ -72,11 +72,9 @@
                     <div id='notifications-container'>
                         <div class='notifications-item'>
                             <div class='notifications-album'>
-                                <div class='notifications-album-cover'>
-                                    <a href="#">
+                                <figure class='notifications-album-cover'>
                                         <img src="../img/main-img/album6.jpg" alt="">
-                                    </a>
-                                </div>
+                                </figure>
                                 <div class='notifications-album-info'>
                                     <a class='notifications-album-name'>Saudade</a>
                                     <p class='notifications-artist-name'>Alceu Valença
@@ -176,84 +174,79 @@
                 </div>
             </div>
 
-            <div id='topbar-profile'>
-                <button id='profile-icon' onclick='showProfile()'>
-                    <img src="../img/user.jpg" alt="" id='topbar-profile-pic'>
+            <div id='topbar-account'>
+                <button id='account-icon' onclick='showAccount()'>
+                    <img src="../img/user.jpg" alt="" id='topbar-account-pic'>
                 </button>
 
-                <div id='profile-navigation'>
-                    <div id='profile-header'>
+                <div id='account-navigation'>
+                    <div id='account-header'>
                         <div href='' id='header-user'>
-                            <img src="../img/user-40x40.jpg" alt="" id='profile-header-img'>
-                            <p id='profile-user'>monivrgs</p>
+                            <img src="../img/user-40x40.jpg" alt="" id='account-header-img'>
+                            <p id='account-user'>monivrgs</p>
                         </div>
-                            <i class="glyphicon glyphicon-chevron-right"></i>
                     </div>
 
-                    <ul id='profile-options'>
-                        <!------ACCOUNT ITEMS------->
-                        <div id='account-info-container'>
-                            <li class='account-item'>
-                                <span class='item-text'>Membros da família</span>
-                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
-                            </li>
-                            <li class='account-item'>
-                                <span class='item-text'>Configurações</span>
-                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
-                            </li>
-                            <li class='account-item'>
-                                <span class='item-text'>Gerenciar minhas exclusões</span>
-                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
-                            </li>
-                            <li class='account-item'>
-                                <span class='item-text'>Desconectar</span>
-                            </li>
-                        </div>
-                        <!----MODES----->
+                    <ul id='account-menu'>
+                       
+                        <li class='account-item'>
+                            <span class='item-text'>Membros da família</span>
+                            <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                        </li>
+                        <li class='account-item'>
+                            <span class='item-text'>Configurações</span>
+                            <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                        </li>
+                        <li class='account-item'>
+                            <span class='item-text'>Gerenciar minhas exclusões</span>
+                            <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                        </li>
+                        <li class='account-item'>
+                            <span class='item-text'>Desconectar</span>
+                        </li>
 
-                        <li id='kids-mode' class='account-input'>
-                            <span class='input-text'>Ativar Deezer Kids</span>
+                        <li id='kids-mode' class='account-modes'>
+                            <span class='mode-text'>Ativar Deezer Kids</span>
                             <div class='input-container'>
-                                <label for="kids-activate" class='label-input' id="kids-activate" onclick="activateKidsMode()"><input type="checkbox" id="kids-activate-input" class='account-input-input' value>
+                                <label for="kids-activate" class='input-label' id="kids-activate" onclick="activateKidsMode()">
+                                    <input type="checkbox" id="kids-activate-input" class='mode-input' >
                                 </label>
                             </div>
                         </li>
-                        <li id='night-mode' class='account-input'>
-                            <span class='input-text'>Ativar Modo Noturno</span>
+                        <li id='night-mode' class='account-modes'>
+                            <span class='mode-text'>Ativar Modo Noturno</span>
                             <div class='input-container'>
-                                <label for="night-activate" class='label-input' id="night-activate" onclick="activateNightMode()">    
-                                    <input type="checkbox"  class='account-input-input' id="night-activate-input">
+                                <label for="night-activate" class='input-label' id="night-activate" onclick="activateNightMode()">    
+                                    <input type="checkbox"  class='mode-input' id="night-activate-input">
                                 </label>
                             </div>
                         </li>
+                       
+                        <li class='account-item' id='deezer-info'>
+                            <span class='item-text'>Deezer Labs</span>
+                            <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                        </li>
+                        <li class='account-item'>
+                            <span class='item-text'>Ajuda</span>
+                            <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                        </li>
+                        <li class='account-item'>
+                            <span class='item-text'>Rescursos</span>
+                            <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                        </li>
+                        <li class='account-item'>
+                            <span class='item-text'>Sobre nós</span>
+                            <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                        </li>
+                        <li class='account-item' id='deezer-info'>
+                            <span class='item-text'>Jobs</span>
+                            <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                        </li>
+                        <li class='account-item' id='deezer-info'>
+                            <span class='item-text'>Legal</span>
+                            <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
+                        </li>
 
-                        <!------DEEZER INFO------>
-                        <div id='deezer-info-container'>
-                            <li class='deezer-info' id='deezer-info'>
-                                <span class='deezer-info-item'>Deezer Labs</span>
-                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
-                            </li>
-                            <li class='deezer-info'>
-                                <span class='deezer-info-item'>Ajuda</span>
-                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
-                            </li>
-                            <li class='deezer-info'>
-                                <span class='deezer-info-item'>Rescursos</span>
-                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
-                            </li>
-                            <li class='deezer-info'>
-                                <span class='deezer-info-item'>Sobre nós</span>
-                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
-                            </li>
-                            <li class='deezer-info' id='deezer-info'>
-                                <span class='deezer-info-item'>Jobs</span>
-                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
-                            </li>
-                            <li class='deezer-info' id='deezer-info'>
-                                <span class='deezer-info-item'>Legal</span>
-                                <svg class="svg-icon svg-icon-chevron-right animate-wobble-target" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.3 6l-4.5 4.4a.9.9 0 0 0 0 1.3.8.8 0 0 0 1.3 0l5.2-5.1a.9.9 0 0 0 0-1.2L4.1.3a.9.9 0 0 0-1.3 0 .9.9 0 0 0 0 1.3z"></path></svg>
-                            </li>
-                        </div>
                         
                     </ul>
                 </div>
@@ -264,7 +257,9 @@
 
     <section id='page-sidebar'>
         <div id='sidebar-header'>
-            <a href="#"><img src="../img/deezer-logo.png" alt="deezer-logo" id="logo"></a>
+            <a href="#">
+                <img src="../img/deezer-logo.png" alt="deezer-logo" id="logo">
+            </a>
         </div>
 
         <ul id='sidebar-content'>
@@ -302,6 +297,100 @@
         </ul>
     </section>
 
+    <section id='page-player'>
+        <div id='player-controls'>
+            <ul id='player-controls-options'>
+                <li class='player-control'>
+                    <button id='previous-button' aria-label="Anterior" class='player-control-btn'>
+                        <svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 gHFJOr"><g><path d="M15 0v16L2 8.802V16H1V0h1v7.198L15 0z"></path></g></svg>
+                    </button>
+                </li>
+                <li class='player-control'>
+                    <button id='play-button' aria-label="Tocar" class='player-control-btn'>
+                    <svg viewBox="0 0 24 24" width="24" height="24" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 gHFJOr"><g><path d="m5 2 18 10L5 22V2z"></path></g></svg>
+                </button>
+                </li>
+                <li class='player-control'>
+                    <button id='next-button' aria-label="Seguinte" class='player-control-btn'> 
+                    <svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 gHFJOr"><g><path d="M1 1v14l11-6.217V15h1V1h-1v6.217L1 1z"></path></g></svg>
+                </button>
+                </li>
+            </ul>
+        </div>
+    
+        <div id='player-track'>
+            <div id='track-heading'>
+                <div id='track-info'>
+                    <a href="#" class='track-title' id="track-song-title">Song Title</a>
+                    
+                    <a href="#" class=track-title id="track-artist-name">Artist Name</a>
+                </div>
+                <div id='track-actions'>
+                    <ul id='track-actions-options'>
+                        <li class='track-action-item'>
+                            <button id='track-show-lyrics' aria-label="Mostrar letras" class='track-actions-btn'>
+                                <svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 gHFJOr"><g><path d="M15 4.5a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0zm1 0a4.5 4.5 0 0 1-5.099 4.46L3.048 15 0 12l7-7.58v.08a4.5 4.5 0 1 1 9 0zM7.166 5.715l-5.774 6.252 1.736 1.71 6.57-5.053a4.511 4.511 0 0 1-2.532-2.91z"></path></g></svg>
+                            </button>
+                        </li>
+                        <li class='track-action-item'>
+                            <button id='track-add-to-playlist' aria-label="Adicionar à playlist" class='track-actions-btn'>
+                                <svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 gHFJOr"><g><path d="M9 0H8v7H1v1h7v7h1V8h7V7H9V0z"></path></g></svg>
+                            </button>
+                        </li>
+                        <li class='track-action-item'>
+                            <button id='track-add-to-favorites' aria-label="Adicionar aos favoritos" class='track-actions-btn'>
+                                <svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 gHFJOr"><g><path clip-rule="evenodd" fill-rule="evenodd" d="m8 4.79-.755-.869c-1.17-1.348-2.252-1.832-3.093-1.9-.836-.067-1.59.263-2.164.858C.802 4.108.528 6.283 2.04 7.812a245.96 245.96 0 0 0 4.775 4.7c.482.46.882.837 1.186 1.122.304-.285.704-.663 1.186-1.123a238.026 238.026 0 0 0 4.771-4.695 3.545 3.545 0 0 0 .057-4.963c-.572-.589-1.324-.915-2.161-.843-.843.072-1.926.562-3.098 1.911L8 4.791zm6.672 3.725C10.78 12.452 8 15 8 15s-2.78-2.548-6.672-6.485c-3.717-3.76 1.043-10.549 5.976-5.972.232.215.464.455.696.723.232-.267.464-.508.696-.723C13.63-2.04 18.39 4.68 14.672 8.515z"></path><path d="m8 4.79-.755-.869c-1.17-1.348-2.252-1.832-3.093-1.9-.836-.067-1.59.263-2.164.858C.802 4.108.528 6.283 2.04 7.812a245.96 245.96 0 0 0 4.775 4.7c.482.46.882.837 1.186 1.122.304-.285.704-.663 1.186-1.123a238.026 238.026 0 0 0 4.771-4.695 3.545 3.545 0 0 0 .057-4.963c-.572-.589-1.324-.915-2.161-.843-.843.072-1.926.562-3.098 1.911L8 4.791zm6.672 3.725C10.78 12.452 8 15 8 15s-2.78-2.548-6.672-6.485c-3.717-3.76 1.043-10.549 5.976-5.972.232.215.464.455.696.723.232-.267.464-.508.696-.723C13.63-2.04 18.39 4.68 14.672 8.515z"></path></g></svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id='track-bar'>
+                <span id='track-counter-current'>0:00</span>
+                <input type="range" name="" step='1' min='0' max='158' id='-ms-track-bar-slider'>
+                <span id='track-counter-max'>04:00</span>
+            </div>
+        </div>
+        <div id='player-options'>
+            <ul id='player-options-list'>
+                <li class='player-options-item'>
+                    <ul id='player-options-options'>
+                        <li class='player-options-option-item'>
+                            <button class='player-options-option-btn' aria-label="Repetir todas as faixas na lista">
+                                <svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 kGoxVz"><g><path d="M9 5H4a3 3 0 0 0 0 6h1.2v1H4a4 4 0 0 1 0-8h1V2l4 3zm3 6a3 3 0 0 0 0-6h-1.2V4H12a4 4 0 0 1 0 8h-1v2l-4-3h5z"></path></g></svg>
+                            </button>
+                        </li>
+                        <li class='player-options-option-item'>
+                            <button class='player-options-option-btn' aria-label='Ativar modo aleatório'>
+                                <svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 kGoxVz"><g><path d="m16 5-4-3v2h-2v1h6zm-12.553.007c.377-.015 1.169-.044 1.935.231.434.156.83.403 1.12.787.285.38.498.938.498 1.774 0 1.009.248 1.805.673 2.422.423.614.996 1.013 1.59 1.272.976.426 2.054.492 2.737.502V14l4-3h-2v-.003h-1.647c-.627 0-1.74-.005-2.69-.42-.465-.203-.873-.497-1.167-.924C8.204 9.23 8 8.64 8 7.8c0-1.014-.262-1.793-.7-2.375-.435-.579-1.013-.923-1.58-1.127-.982-.353-2.02-.304-2.34-.29-.04.003-.07.004-.086.004H0v1h3.294l.153-.004zM5 12H0v-1h5v1z"></path></g></svg>
+                            </button>
+                        </li>
+                        <li class='player-options-option-item'>
+                            <button class='player-options-option-btn'>
+                                <svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 gHFJOr"><g><path d="M5.894 9.8H2V6.2h3.894L9 3.301V12.7L5.894 9.8zM1 10.8h4.5L10 15V1L5.5 5.2H1v5.6zm14-3.145a5.117 5.117 0 0 1-1.504 3.63l-.687-.728A4.118 4.118 0 0 0 14 7.655a4.116 4.116 0 0 0-1.013-2.71l.708-.708A5.112 5.112 0 0 1 15 7.655zm-2.094.108c0 .784-.33 1.49-.857 1.99l-.687-.727a1.734 1.734 0 0 0 .036-2.491l.707-.707a2.73 2.73 0 0 1 .801 1.935z"></path></g></svg>
+                            </button>
+                        </li>
+                        <li class='player-options-option-item'>
+                            <button class='player-options-option-btn' aria-label="Áudio">
+                                <svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 gHFJOr"><g><path d="M5.937 4a2 2 0 0 1-3.874 0H0V3h2.063a2 2 0 0 1 3.874 0H16v1H5.937zM5 3.5a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm.937 9.5H16v1H5.937a2 2 0 0 1-3.874 0H0v-1h2.063a2 2 0 0 1 3.874 0zM5 13.5a1 1 0 1 0-2 0 1 1 0 0 0 2 0zM13.937 8H16v1h-2.063a2 2 0 0 1-3.874 0H0V8h10.063a2 2 0 0 1 3.874 0zM13 8.5a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"></path></g></svg>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+                <span>|</span>
+
+                <li class='player-options-item'>
+                    <button id='player-options-queue'>
+                        <figure id='player-options-queue-img'>
+                            <img src="../img/queue-img.jpg" alt="">
+                        </figure>
+                        <span id='player-options-queue-text'>Fila de espera</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
     <section id='user-header'>
         <div id='header-user-info'>
             <img src="../img/user.jpg" alt="" id='header-user-pic'>
@@ -311,8 +400,8 @@
                         <li class='follows-item' id='followers'>1 seguidor</li>
                         <li class='follows-item' id='following'>1 seguindo</li>
                     </ul>
-                <div id='header-random-button'>
-                    <button id='header-random'>
+                <div id='header-random'>
+                    <button id='header-random-button'>
                     <span><svg class="svg-icon svg-icon-shuffle" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M9.333 9.214h-.666C6.826 9.214 5.333 7.775 5.333 6c0-1.066-.894-1.929-2-1.929H.683C.298 4.071 0 3.784 0 3.43c0-.356.298-.643.667-.729.137 0 2.65.01 2.666 0 1.841.086 3.334 1.525 3.334 3.3 0 1.065.896 1.929 2 1.929h3c.185 0 .333.143.333.321v.321L9.333 10.5V9.214zm-.666-5.143c-.367 0-.708.103-1.004.27a4.497 4.497 0 0 0-.672-1.104c.493-.28 1.062-.451 1.709-.537.013.03.51 0 .6 0V1.5L12 3.429v.321a.327.327 0 0 1-.333.321h-3zM3.333 7.93c.369 0 .709-.103 1.004-.27.168.404.4.767.672 1.104-.493.28-1.062.451-1.676.537-.018-.011-2.435 0-2.666 0C.298 9.214 0 8.927 0 8.571c0-.355.298-.642.667-.642h2.666z"></path></svg>
 
                     <span id='random-text'>Minha música - Aleatório</span>
@@ -322,7 +411,7 @@
         </div>
 
         <nav id='header-nav'>
-            <ul>
+            <ul id='header-nav-menu'>
                 <li class='header-nav-item'><a href="highlights.html" class="header-nav-link">Destaques</a></li>
                 <li class='header-nav-item'><a href="favorites.html" class="header-nav-link">Mais queridas</a></li>
                 <li class='header-nav-item'><a href="playlist.html" class="header-nav-link">Playlists</a></li>
@@ -330,7 +419,7 @@
                 <li class='header-nav-item'><a href="artists.html" class="header-nav-link">Artistas</a></li>
                 <li class='header-nav-item'><a href="podcasts.html" class="header-nav-link">Podcasts</a></li>
                 <li id='header-nav-more' class='header-nav-item'>
-                    <button href="" id='menu-more-button' onclick="showMenuMore()">Mais<svg class="svg-icon svg-icon-sort-desc" focusable="false" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true"><path d="M5.997 8.5L2.5 3.507l7-.007z"></path></svg></>
+                    <button href="" id='menu-more-button' onclick="showMenuMore()">Mais<svg class="svg-icon svg-icon-sort-desc" focusable="false" height="16" width="16" viewBox="0 0 12 12" aria-hidden="true"><path d="M5.997 8.5L2.5 3.507l7-.007z"></path></svg></button>
                     <div id='menu-more-container'>
                         <ul id='menu-more-content'>
                             <li class='menu-more-option'>Histórico de reprodução</li>
@@ -348,7 +437,7 @@
 
     <section id='playlist-container'>
         <div id='playlist-header'>
-            <h2 id='playlist-title'>12 playlists</h2>
+            <span id='playlist-title'>12 playlists</span>
 
             <div id='playlist-nav'>
                 <div id='filter-dropdown'>
@@ -404,10 +493,10 @@
 
             </ul>   
         </div>
+
     </section>
 
     <script src="../js/script.js"></script>
     <script src="../js/playlists.js"></script>
-    <script src="../js/playlist_list.js"></script>
 </body>
 </html>

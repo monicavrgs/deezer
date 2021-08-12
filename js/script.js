@@ -1,5 +1,3 @@
-let curPage = document.URL;
-
 function showCloseButton(){
     let closeButton = document.getElementById("search-clear")
 
@@ -8,48 +6,45 @@ function showCloseButton(){
 
 function showNotifications(){
     let notifications = document.getElementById("notifications-content")
-    let profile = document.getElementById("profile-navigation")
-
-    let playlistContainer= document.getElementById("playlist-container")
-    let userHeader = document.getElementById("user-header")
-    let searchInput = document.getElementById("search")
+    let account = document.getElementById("account-navigation")
 
 
     if(notifications.style.display == "block"){
         notifications.style.display = "none"
-        userHeader.style.zIndex = "1"
-        playlistContainer.style.zIndex = "1"
-        orderMenu.style.zIndex = "1"
-    }else if (profile.style.display == "block"){
-        profile.style.display = "none"
+        account.style.zIndex = "1"
+    }else if (account.style.display == "block"){
+        account.style.display = "none"
         notifications.style.display = "block"
-    }else{
+    }else{  
         notifications.style.display = "block"
-        userHeader.style.zIndex = "-1"
-        playlistContainer.style.zIndex = "-1"
-        orderMenu.style.zIndex = "-1"
+    }    
+
+    window.onclick = (event)=>{
+        if(!event.target.closest("#topbar-notifications")){
+            notifications.style.display = 'none'
+        }
     }
+    
+
 }
 
-function showProfile(){
-    let profile = document.getElementById("profile-navigation")
+function showAccount(){
+    let account = document.getElementById("account-navigation")
     let notifications = document.getElementById("notifications-content")
 
-    let playlistContainer= document.getElementById("playlist-container")
-    let userHeader = document.getElementById("user-header")
-
-
-    if(profile.style.display == "block"){
-        profile.style.display = "none"
-        userHeader.style.zIndex = "1"
-        playlistContainer.style.zIndex = "1"
+    if(account.style.display == "block"){
+        account.style.display = "none"
     }else if (notifications.style.display == "block"){
         notifications.style.display = "none"
-        profile.style.display = "block"
+        account.style.display = "block"
     }else{  
-        profile.style.display = "block"
-        userHeader.style.zIndex = "-1"
-        playlistContainer.style.zIndex = "-1"
+        account.style.display = "block"
+    }
+
+    window.onclick = (event)=>{
+        if(!event.target.closest("#topbar-account")){
+            account.style.display = 'none'
+        }
     }
 }
 
@@ -91,19 +86,26 @@ function highlightCurrent(){
 
     for(let link of links){
 
-        if(curPage.split("/").pop() == link.href.split("/").pop() && link.classList.contains("sidebar-link") == true){
-            link.classList.add("current-page-sidebar")
-        }else{
-            link.classList.remove("current-page-sidebar")
+        function highlightTopbar(){
+            if(curPage.split("/").pop() == link.href.split("/").pop() && link.classList.contains("header-nav-link") == true){
+                link.classList.add("current-page-header-nav")
+            }else{
+                link.classList.remove("current-page-header-nav")
+            }
         }
 
-        if(curPage.split("/").pop() == link.href.split("/").pop() && link.classList.contains("header-nav-link") == true){
-            link.classList.add("current-page-header-nav")
-        }else{
-            link.classList.remove("current-page-header-nav")
+        function highlightSidebar(){
+            if(curPage.split("/").pop() == link.href.split("/").pop() && link.classList.contains("sidebar-link") == true){
+                link.classList.add("current-page-sidebar")
+            }else{
+                link.classList.remove("current-page-sidebar")
+            }
         }
+    highlightTopbar()
+    highlightSidebar()
     }
 }
+
 
 function showMenuMore(){
     let menuMore = document.getElementById("menu-more-container")

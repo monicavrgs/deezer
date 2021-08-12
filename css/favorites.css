@@ -4,9 +4,9 @@
     --bkg-hover-color: #d4d4d4;
     --primary-color: #1d1d1d;
     --secondary-color: #686868;
-    --hover-color: #f14a4a;
+    --tertiary-color: #f14a4a;
     --border-color: #e3e3e3;
-    --box-shadow-color: #e2e2e2;
+    --box-shadow-color: #aaaaaa;
 }   
 
 :root .dark-mode{
@@ -55,7 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e23131;
+    background-color:  var(--tertiary-color);
     border: none;
     border-radius: 40px;
     padding: 0 40px;
@@ -79,7 +79,7 @@
 
 #favorites-play:hover{
     cursor: pointer;
-    background-color: #b92222;
+    background-color:  var(--tertiary-color);
 }
 
 #favorites-nav{
@@ -191,7 +191,7 @@
 }
 
 #favorites-search:focus{
-    border: 1px solid #df3f3f;
+    border: 1px solid  var(--tertiary-color);
 }
 
 /* search clear button */

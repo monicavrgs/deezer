@@ -1,71 +1,59 @@
-function showFilterMenu(){
-    let filterMenu = document.getElementById("filter-dropdown-menu")
-    let searchInput = document.getElementById("playlist-search")
+const request = new XMLHttpRequest();
 
-    if(filterMenu.style.display == "none"){
-        filterMenu.style.display = 'block'
-        searchInput.style.zIndex = "-1"
-    }else{
-        filterMenu.style.display = "none"
-        searchInput.style.zIndex = "1"
+request.open('GET', 'http://localhost:3000/playlists');
+request.responseType = 'json';
+request.send();
+
+request.onload = ()=>{
+    let playlistsJSON = request.response;
+    let playlistsText = JSON.stringify(playlistsJSON)
+    let playlists = JSON.parse(playlistsText)
+    createPlaylist(playlists)
+}
+
+
+function createPlaylist(playlists){
+
+    let playlistList = document.getElementById("playlist-list")
+
+    for(let i = 0; i <= playlists.length; i++){      
+        if (playlists[i] !== undefined){
+        let name = playlists[i].name
+        let type = playlists[i].type
+        let cover = playlists[i].img
+
+        let newPlaylist = 
+            `<li  class='playlist-list-item'>
+                <figure class='playlist-cover'>
+                    <img src="${cover}" alt="">
+
+                    <div class='playlist-option-buttons'>
+                        <div class='playlist-play'>
+                            <button class='play-button'>
+                                <span class='play-icon'>
+                                    <svg class="svg-icon svg-icon-play" focusable="false" height="1em" width="1em" viewBox="0 0 12 12" aria-hidden="true"><path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path></svg>
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class='playlist-more-options'>
+                            <button class='playlist-option-more-button' onclick="showPlaylistOptions()">
+                                <span class='more-button-icon'>
+                                    <svg class="svg-icon svg-icon-options" focusable="false" height="12" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 7.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <figcaption class='playlist-infos'>
+                        <a href="#" class='playlist-name'>${name}</a>
+                        <span class='playlist-access-specifier'>${type}</span>
+                    </figcaption>
+                </figure>
+            </li>`
+
+            playlistList.innerHTML += newPlaylist
+
+        }
     }
 }
-
-function showOrderMenu(){
-    let orderMenu = document.getElementById("order-dropdown-menu")
-    let searchInput = document.getElementById("playlist-search")
-    let searchButton = document.getElementById("playlist-search-clear")
-
-
-    if(orderMenu.style.display == "none"){
-        orderMenu.style.display = 'block'
-        searchInput.style.zIndex = "-1"
-    }else{
-        orderMenu.style.display = "none"
-        searchInput.style.zIndex = "1"
-    }
-}
-
-function showCloseSearchButton(){
-    let button = document.getElementById("playlist-search-clear")
-
-    button.style.display = "flex"
-}
-
-function searchPlaylist(){
-
-    let inputField = document.getElementById("playlist-search")
-    inputField.addEventListener("input", ()=>{
-    
-    let filter = inputField.value.toLowerCase() 
-    let playlist = document.getElementsByClassName("playlist-list-item")
-
-        for(let i = 1; i <= playlist.length; i++){
-            let playlistName = playlist[i].getElementsByClassName("playlist-name")[0] //[0] => acesso a coleção HTML
-            let playlistNameText = playlistName.innerHTML.toLowerCase()
-
-            if(playlistNameText.indexOf(filter) > -1){
-              playlist[i].style.display = "flex"
-            }else{
-                playlist[i].style.display = 'none'
-            }
-      }      
-    })    
-}
-
-function clearInput(){
-    let button = document.getElementById("playlist-search-clear")
-    let inputField = document.getElementById("playlist-search")
-    let playlist = document.getElementsByClassName("playlist-list-item")
-
-
-    inputField.value = ""
-    inputField.placeholder = "Buscar"
-    button.style.display = "none"
-
-    for(let i = 0; i <= playlist.length; i++){
-        playlist[i].style.display = 'flex'
-    }
-}
-
-searchPlaylist()

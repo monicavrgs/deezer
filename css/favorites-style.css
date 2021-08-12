@@ -4,9 +4,10 @@
     --bkg-hover-color: #d4d4d4;
     --primary-color: #1d1d1d;
     --secondary-color: #686868;
-    --hover-color: #f14a4a;
+    --tertiary-color: #f14a4a;
     --border-color: #e3e3e3;
-    --box-shadow-color: #e2e2e2;
+    --box-shadow-color: #aaaaaa;
+    --player-track: #686868;
 }   
 
 :root .dark-mode{
@@ -30,6 +31,8 @@ input:focus{
     outline: none; 
 }
 
+/*scrollbar*/
+
 ::-webkit-scrollbar{
     background: var(--secondary-bkg-color);
     border-left: 1px solid var(--border-color);
@@ -46,6 +49,8 @@ input:focus{
 ::-webkit-scrollbar-thumb:hover{
     background: #b3b3b3;
 }
+
+/*input search clear decoration*/
 
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
@@ -71,7 +76,7 @@ input:focus{
 
 /* topbar search */
 
-#topbar-search, #search-input, #search-clear{
+#topbar-search-icon, #search-input, #search-clear{
     border: none;
     background-color: var(--primary-bkg-color);
 }
@@ -83,9 +88,8 @@ input:focus{
     margin-left: 5px;
 }
 
-#topbar-search svg{
-    cursor: default;
-    fill: #474646;
+#topbar-search-icon svg{
+    fill: var(--secondary-color);
 }
 
 #search-input{
@@ -94,7 +98,7 @@ input:focus{
     color: var(--primary-color)
 }
 
-#search-clear{
+#search-clear-button{
     font-family: 'Circular-Loom';
     font-kerning: none;
     float: right;
@@ -106,20 +110,18 @@ input:focus{
     transition: background-color 0.2s;
 }
 
-#search-clear svg{
+#search-clear-button svg{
     fill: #FFF;
     stroke: #FFF;
     margin-left: 8px;
 }
 
-#search-clear:hover{
+#search-clear-button:hover{
     background-color: var(--bkg-hover-color);
     cursor: pointer;
 }
 
-/* notifications & profile*/
-
-/*icons */
+/* notifications & account*/
 
 #topbar-nav{
     display: flex;
@@ -128,7 +130,10 @@ input:focus{
     position: relative;
 }
 
-#notifications-icon, #topbar-profile-pic{
+/*icons */
+
+
+#notifications-icon, #topbar-account-pic{
     border: 0;
     border-radius: 50%;
     background-color: var(--primary-bkg-color);
@@ -145,11 +150,12 @@ input:focus{
     color: var(--secondary-color);
 }
 
+
 #notifications-icon-number{
     position: absolute;
     top: 2px;
     right: 3px;
-    background-color: #ef5466;
+    background-color: var(--tertiary-color);
     color: #FFF;
     font-size: 10px;
     border-radius: 50px;
@@ -161,28 +167,28 @@ input:focus{
     cursor: pointer;
 }
 
-#profile-icon{
+#account-icon{
     border:none;
     background-color: var(--primary-bkg-color);
 }
 
-#profile-icon:hover{
+#account-icon:hover{
     cursor: pointer;
 }
 
-#topbar-profile-pic{
+#topbar-account-pic{
     height: 30px;
     width: 30px;
     margin-top: 3px;
 }
 
 
-/*hidden menus*/
-#notifications-content, #profile-navigation{
+/*dropdown menus*/
+#notifications-content, #account-navigation{
     position: absolute;
 }
 
-#notifications-content, #profile-navigation{
+#notifications-content, #account-navigation{
     width: 375px;
     border-radius: 10px;
     box-shadow: 0px 2px 4px var(--box-shadow-color);
@@ -234,8 +240,6 @@ input:focus{
 
 .notifications-album-cover img{
     border-radius: 3px;
-    width: 63px;
-    height: 63px;
     box-shadow: 0px 2px 8px var(--box-shadow-color);
 }
 
@@ -261,24 +265,23 @@ input:focus{
 .notifications-date{
     margin: 10px 10px;
     padding: 0 5px;
-
     font-size:  12px;
     text-transform: uppercase;
     color: var(--secondary-color);
 }
 
-/*profile info */
+/*account info */
 
 /* header*/
 
-#profile-header{
+#account-header{
     display: flex;
     align-items: center;
     padding: 15px;
     border-bottom: solid 1px var(--border-color);
 }
 
-#profile-header:hover{
+#account-header:hover{
     cursor: pointer;
     background-color: var(--bkg-hover-color);
 }
@@ -287,43 +290,39 @@ input:focus{
     display: flex;
 }
 
-#profile-header-img{
+#account-header-img{
     border-radius:  50%;
 }
 
-#profile-user{
-    margin: 0 10px;
+#account-user{
+    margin-left: 10px;
     align-self: center;
     font-size: 15px;
 }
 
-#profile-options{
+/*account menu*/
+
+#account-menu{
     font-size: 15px;
     padding: 8px 0;
     color: var(--secondary-color);
-
 }
 
-/* profile items */
-#account-info-container{
-    margin-bottom: 5px;
-}
-
-.account-item, .account-input, .deezer-info{
+.account-item, .account-input{
     align-items: center;
 }
 
-.account-item, .deezer-info{
+.account-item{
+    display: flex;
+    justify-content: space-between;
     padding: 15px;
     margin: 0 8px;
     border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
     transition: background-color 0.3s;
 }
 
-.account-item, .deezer-info svg{
-    color: var(--primary-color); 
+.account-item svg{
+    fill: var(--primary-color); 
 }
 
 .account-item:hover{
@@ -336,7 +335,7 @@ input:focus{
     right: -5px;
 }
 
-.account-input{
+.account-modes{
     border-bottom: solid 1px var(--border-color);
     display: flex;
     justify-content: space-between;
@@ -348,7 +347,7 @@ input:focus{
 
 /*label night/kids mode*/
 
-.label-input{
+.input-label{
     width: 32px;
     height: 16px;
     border-radius: 40px;
@@ -359,15 +358,15 @@ input:focus{
     position: relative;
 }
 
-.account-input{
+.account-modes{
     padding: 20px 15px;
 }
 
-.account-input-input{
+.mode-input{
     display: none;
 }
 
-.label-input::after{
+.input-label::after{
     content: '';
     height: 14px;
     width: 14px;
@@ -379,9 +378,11 @@ input:focus{
     transition-duration: 0.3s;
 }
 
-.label-input:hover{
+.input-label:hover{
     cursor: pointer;
 }
+
+/*active modes - class toggle*/
 
 .label-input-checked::after{
     left: 16px;
@@ -389,28 +390,10 @@ input:focus{
 }
 
 .label-input-checked{
-    background-color: #f14a4a;
+    background-color:  var(--tertiary-color);
 }
 
-/*deezer info*/
-#deezer-info-container{
-    padding: 10px 0;
-}
-
-.deezer-info{
-    padding: 10px 15px;
-}
-
-.deezer-info:hover{
-    cursor: pointer;
-    background-color: var(--bkg-hover-color);
-}
-
-.deezer-info:hover svg{
-    position: relative;
-    right: -5px;
-}
-
+    
 /* SIDEBAR*/
 
 #page-sidebar{
@@ -442,8 +425,7 @@ input:focus{
     transition: 0.2s;
 }
 
-
-.sidebar-item a, svg{
+.sidebar-item a{
     color: var(--primary-color);
     text-decoration: none;
     vertical-align: middle;
@@ -451,6 +433,7 @@ input:focus{
 
 .svg-icon{
     margin-right: 8px;
+    vertical-align: middle;
     fill: currentColor;
 }
 
@@ -459,18 +442,18 @@ input:focus{
 }
 
 .sidebar-item:hover a{
-    color: var(--hover-color);
+    color: var(--tertiary-color);
 }
 
 .sidebar-item:hover svg{
-    color: var(--hover-color);
+    color: var(--tertiary-color);
     fill: currentColor;
     stroke: currentColor;
     stroke-width: 0;
 }
 
 .current-page-sidebar{
-    border-left: solid 3px #f14a4a;
+    border-left: solid 3px var(--tertiary-color);
 }
 
 /*SIDEBAR FAVORITES ITEMS*/
@@ -490,15 +473,164 @@ input:focus{
 }
 
 .favorites-item:hover a{
-    color: var(--hover-color);
+    color: var(--tertiary-color);
     text-decoration: none;
 }
 
+/*player*/
 
-.favorites-item:active{
-    border-left: solid 3px #f14a4a;
+#page-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 15px;
+    background-color: var(--secondary-bkg-color);
+    border-top: 1px solid var(--border-color);
+    z-index: 2;
 }
 
+#player-controls-options, #track-heading, #track-actions-options, #player-options-list, #player-options-options, #player-options-queue{
+    display: flex;
+}
+
+#page-player button{
+    background-color: var(--secondary-bkg-color);
+    border: none;
+    border-radius: 50%;
+}
+
+#page-player svg{
+    fill: var(--primary-color)
+}
+
+#page-player button:hover{
+    background-color: var(--bkg-hover-color);
+    cursor: pointer;
+}
+
+
+.player-control-btn{
+    padding: 13px;
+}
+
+#previous-button svg, #next-button svg{
+    padding-top: 3px;
+    padding-left: 1px;
+}
+
+#previous-button svg{
+    padding-right: 2px;
+}
+
+#player-track{
+    width: 50%;
+}
+
+#track-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    width: 80%;
+    margin-left: 27px;
+    margin-bottom: 10px;
+}
+
+#track-heading a{
+    color: var(--primary-color)
+}
+
+#track-artist-name::before{
+    content: "-";
+    margin-right: 5px;
+    margin-left: 3px;
+}
+
+#track-actions-options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.track-title:hover a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.track-actions-btn{
+    padding: 8px;
+}
+
+#track-bar{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    height: 2px;
+    width: 80%; 
+    background-color: var(--player-track);
+    margin: 0 8px;
+}
+
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #858484;
+}
+
+input[type=range]:hover{
+    height: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover{
+    cursor: pointer;
+}
+
+#track-counter-current, #track-counter-max{
+    color: var(--primary-color);
+}
+
+#player-options-list, #player-options-queue{
+    align-items: center;
+}
+
+#player-options-list{
+    margin-right: 15px;
+}
+
+#player-options-options{
+    margin-right: 10px;
+}
+
+.player-options-option-btn{
+    padding: 8px;
+}
+
+#player-options-queue{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px !important;
+    color: var(--primary-color);
+    margin-right: 15px; 
+    padding: 10px 15px;
+}
+
+#player-options-queue-img img{
+    border-radius: 3px;
+}
+
+#player-options-queue-text{
+    margin-left: 8px;
+}
 /* USER HEADER */
 
 #user-header{
@@ -546,9 +678,17 @@ input:focus{
 }
 
 #header-random{
+    border-radius: 40px;
+}
+
+#header-random:active{
+    border: solid 3px  var(--tertiary-color);
+}
+
+#header-random-button{
     border: none;
     border-radius: 40px;
-    background-color: #f14a4a;
+    background-color:  var(--tertiary-color);
     color: #FFF;
     padding: 12px 28px;
     margin: 1px 2px;
@@ -558,26 +698,18 @@ input:focus{
     transition: background-color 0.3s, padding 0.3s;
 }
 
-#header-random-button{
-    border-radius: 40px;
-}
-
-#header-random-button:active{
-    border: solid 3px #f14a4a;
-}
-
-#header-random svg{
+#header-random-button svg{
     color: #FFF;
     margin-bottom: 2px;
     margin-right: 5px;
 }
 
-#header-random:hover{
+#header-random-button:hover{
     background-color: #ce323c; 
     cursor: pointer;
 }
 
-#header-random:active{
+#header-random-button:active{
     padding: 10px 22px;
 }
 
@@ -589,10 +721,9 @@ input:focus{
     padding-top: 5px;
     padding-left: 20px;
     font-size: 16px;
-    box-shadow: 0 2px 3px var(--box-shadow-color);
 }
 
-#header-nav ul{
+#header-nav-menu{
     display: flex;
 }
 
@@ -612,7 +743,7 @@ input:focus{
 
 .header-nav-item:hover a{
     text-decoration: none;
-    border-bottom: solid 2px #505050;
+    border-bottom: solid 2px var(--secondary-color);
     color: var(--primary-color);
 }
 
@@ -620,27 +751,16 @@ input:focus{
     border-bottom: solid 2px #f14a4a;
 }
 
-/*header item menu more*/
-#menu-more-button{
-    color: var(--secondary-color);
-}
-
-#menu-more-button svg{
-    fill: var(--secondary-color);
-}
-
-#header-nav-more:hover{
-    cursor: pointer;
-}
-
-#header-nav-more:hover a{
-    text-decoration: none;
-    cursor: pointer;
-}
 
 /*header menu dropdown*/
 
+#header-nav-more{
+    position: relative;
+}
+
 #menu-more-button{
+    color: var(--secondary-color);
+
     background-color: var(--primary-bkg-color);
     border: 0;
     font-family: 'Open Sans', sans-serif;
@@ -652,14 +772,12 @@ input:focus{
 #menu-more-button svg{
     margin-left: 5px;
     margin-bottom: 3px;
+    fill: var(--secondary-color);
+
 }
 
 #menu-more-button:hover{
     cursor: pointer;
-}
-
-#header-nav-more{
-    position: relative;
 }
 
 #menu-more-container{
