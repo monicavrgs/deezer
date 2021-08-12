@@ -312,7 +312,7 @@ input:focus{
     align-items: center;
 }
 
-.account-item{
+.account-item, .account-deezer-item{
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -333,6 +333,10 @@ input:focus{
 .account-item:hover svg{
     position: relative;
     right: -5px;
+}
+
+.account-deezer-item{
+    padding: 8px 15px;
 }
 
 .account-modes{

@@ -198,6 +198,51 @@
       }
   ],
 
+  "notifications": [
+    {
+        "album": "Saudade",
+        "artist": "Alceu Valença",
+        "img": "/img/main-img/album6.jpg",
+        "release": "38 minutos",
+        "type": "single"
+    },
+    {
+        "album": "Reach Out/Olympus",
+        "artist": "Sufjan Stevens, Angelo De Augustine",
+        "img": "/img/main-img/album1.jpg",
+        "release": "22 minutos",
+        "type": "single"
+    },
+    {
+        "album": "Susie Cincinnati/Big Sur",
+        "artist": "The Beach Boys",
+        "img": "/img/main-img/album2.jpg",
+        "release": "1 semana",
+        "type": "single"
+    },
+    {
+        "album": "CALL ME IF YOU GET LOST",
+        "artist": "Tyler, The Creator",
+        "img": "/img/main-img/album4.jpg",
+        "release": "1 semana",
+        "type": "álbum"
+    },
+    {
+        "album": "Come Gather 'Round",
+        "artist": "Feng Suave",
+        "img": "/img/main-img/album3.jpg",
+        "release": "1 semana",
+        "type": "álbum"
+    },
+    {
+        "album": "The Jackie",
+        "artist": "Bas, J. Cole, Lil Tjay",
+        "img": "/img/main-img/album5.jpg",
+        "release": "2 semanas",
+        "type": "álbum"
+    }
+  ],
+
   "playlists": [
       {
           "name": "1",

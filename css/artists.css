@@ -107,8 +107,7 @@
     animation-play-state: running;
     animation-delay: 0;
     animation-fill-mode: forwards;
-    transform-origin: top center
-
+    transform-origin: top center;
 }
 
 @keyframes growDown{

@@ -24,8 +24,6 @@ function showNotifications(){
             notifications.style.display = 'none'
         }
     }
-    
-
 }
 
 function showAccount(){
