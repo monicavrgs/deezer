@@ -43,7 +43,7 @@ function createFavorite(favorites){
                 </td>
             </tr>`
 
-            favoritesList.innerHTML += newfavorite
+            favoritesList.innerHTML += newFavorite
 
         }
     }

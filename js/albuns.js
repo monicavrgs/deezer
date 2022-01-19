@@ -1,32 +1,29 @@
-const request = new XMLHttpRequest();
+window.addEventListener('load', loadAlbuns)
 
-request.open('GET', 'http://localhost:3000/albuns');
-request.responseType = 'json';
-request.send();
+async function getAlbuns(){
+    try{
+        let response = await fetch("http://localhost:3000/albuns")
+        let albuns = await response.json()
+        return albuns
+    } catch (error){
+        console.log(error)
+    }
+}
 
-
-request.onload = ()=>{
-    let albunsJSON = request.response;
-    let albunsText = JSON.stringify(albunsJSON)
-    let albuns = JSON.parse(albunsText)
+async function loadAlbuns(){
+    let albuns = await getAlbuns()
     createAlbuns(albuns)
 }
 
-
 function createAlbuns(albuns){
+   let albunsList = document.getElementById("albuns-list")
 
-    let albunsList = document.getElementById("albuns-list")
-
-    for(let i = 0; i <= albuns.length; i++){      
-        if (albuns[i] !== undefined){
-        let name = albuns[i].name
-        let artist = albuns[i].artist
-        let cover = albuns[i].img
-
+   albunsList.innerHTML = ''
+    albuns.forEach(album =>{
         let newAlbum = 
             `<li  class='albuns-list-item'>
             <figure class='albuns-cover'>
-                <img src="${cover}">
+                <img src="${album.img}">
 
                 <div class='albuns-option-buttons'>
                     <div class='albuns-play'>
@@ -56,17 +53,16 @@ function createAlbuns(albuns){
 
                 <figcaption class='album-infos'>
                     <div class='album-infos-container'>
-                        <a href="#" class='album-name'>${name}</a>
-                        <span class='album-artist'>${artist}</span>
+                        <a href="#" class='album-name'>${album.name}</a>
+                        <span class='album-artist'>${album.artist}</span>
                     </div>
                 </figcaption>
             </figure>
         </li>`
-
-            albunsList.innerHTML += newAlbum
-
-        }
-    }
+        
+        albunsList.innerHTML += newAlbum
+    })
+    
 }
 function showCloseSearchButton(){
     let button = document.getElementById("albuns-search-clear")
@@ -74,43 +70,38 @@ function showCloseSearchButton(){
     button.style.display = "flex"
 }
 
-function clearInput(){
+async function clearSearch(){
     let button = document.getElementById("albuns-search-clear")
     let inputField = document.getElementById("albuns-search")
 
-    let albuns = document.getElementsByClassName("albuns-list-item")
-
     inputField.value = ""
     inputField.placeholder = "Buscar"
+
     button.style.display = "none"
 
-    for(let i = 0; i <= albuns.length; i++){
-        albuns[i].style.display = 'flex'
-    }
+    loadAlbuns()
 
 }
 
-function searchAlbuns(){
+async function searchAlbuns(){
+
+    let albuns = await getAlbuns()
 
     let inputField = document.getElementById("albuns-search")
-    inputField.addEventListener("input", ()=>{
+    inputField.addEventListener('keyup', (event)=>{
     
-    let filter = inputField.value.toLowerCase() 
-    let albuns = document.getElementsByClassName("albuns-list-item")
+        if(event.keyCode === 13){
+            let filter = inputField.value.toLowerCase() 
 
-        for(let i = 0; i <= albuns.length; i++){
-            let albumName = albuns[i].getElementsByClassName("album-name")[0]
-            let albumNameText = albumName.innerHTML.toLowerCase()
-
-            if(albumNameText.indexOf(filter) > -1){
-               albuns[i].style.display = "flex"
-            }else{
-                albuns[i].style.display = 'none'
-            }
-        }      
-    })    
+            albuns.forEach(album =>{
+                if(album.name.toLowerCase() == filter){
+                    let filteredAlbum = [album]
+                    createAlbuns(filteredAlbum)
+                }
+            })
+        }
+    })
 }
-
 
 function showOrderMenu(){
     let orderMenu = document.getElementById("order-dropdown-menu")

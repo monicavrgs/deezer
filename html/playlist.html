@@ -198,7 +198,7 @@
         </ul>
     </section>
 
-    <section id='page-player'>
+    <!-- <section id='page-player'>
         <div id='player-controls'>
             <ul id='player-controls-options'>
                 <li class='player-control'>
@@ -290,7 +290,7 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
 
     <section id='user-header'>
         <div id='header-user-info'>
@@ -357,7 +357,7 @@
                 </div>
 
                 <input type="search" name="playlist-search" id="playlist-search" placeholder="Buscar" oninput="showCloseSearchButton()">
-                <button id='playlist-search-clear' onclick="clearInput()">
+                <button id='playlist-search-clear' onclick="clearSearch()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="close"><rect width="12" height="12" transform="rotate(180 12 12)" opacity="0"/><path d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/></g></g></svg>
                 </button>
 
@@ -396,6 +396,29 @@
         </div>
 
     </section>
+
+    <div id='new-playlist-modal'>
+        <div id='modal-container'>
+            <div id='modal-header'>
+                <button id='close-modal-button'>
+                    <svg class="svg-icon svg-icon-cancel" focusable="false" height="12" role="img" width="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.75 10.25l8.5-8.5m.002 8.505L1.75 1.75" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="1.5"></path></svg>
+                </button>
+                <h2 id='modal-title'>Criar uma playlist</h2>
+            </div>
+            <div id='modal-content'>
+                <figure id='modal-playlist-cover'>
+                    <img src="../img/cover-200-200.jpg" alt="" id='modal-playlist-cover-img'>
+                    <div id='modal-change-cover-icon'>
+                        <svg class="svg-icon svg-icon-camera" focusable="false" height="20" role="img" width="20" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 1H2l-.25 1H0v8h12V2H4.25L4 1zm6 2.5a.499.499 0 1 1 1 0 .499.499 0 1 1-1 0zm-9 0a.5.5 0 0 1 .505-.5h.99a.501.501 0 1 1 0 1h-.99A.501.501 0 0 1 1 3.5zM7 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-1a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.25-2a1.25 1.25 0 1 0-2.5 0 1.25 1.25 0 0 0 2.5 0z" fill-rule="evenodd"></path></svg>
+                    </div>
+                </figure>
+                <div id='modal-playlist-info'>
+                    <label for="playlist-name">Nome</label>
+                    <input type="text" name="playlist-name" id="modal-playlist-name" placeholder="Nome da playlist">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="../js/script.js"></script>
     <script src="../js/playlists.js"></script>

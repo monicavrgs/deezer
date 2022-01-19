@@ -1,31 +1,31 @@
-const request = new XMLHttpRequest();
+window.addEventListener('load', loadPlaylists)
 
-request.open('GET', 'http://localhost:3000/playlists');
-request.responseType = 'json';
-request.send();
-
-request.onload = ()=>{
-    let playlistsJSON = request.response;
-    let playlistsText = JSON.stringify(playlistsJSON)
-    let playlists = JSON.parse(playlistsText)
-    createPlaylist(playlists)
+async function getPlaylists(){
+    try{
+        let response = await fetch("http://localhost:3000/playlists")
+        let playlists = await response.json()
+        return playlists
+    } catch (error){
+        console.log(error)
+    }
 }
 
+async function loadPlaylists(){
+    let playlists = await getPlaylists()
+    createPlaylist(playlists)
+}
 
 function createPlaylist(playlists){
 
     let playlistList = document.getElementById("playlist-list")
 
-    for(let i = 0; i <= playlists.length; i++){      
-        if (playlists[i] !== undefined){
-        let name = playlists[i].name
-        let type = playlists[i].type
-        let cover = playlists[i].img
+    playlistList.innerHTML = ''
 
+    playlists.forEach(playlist =>{
         let newPlaylist = 
             `<li  class='playlist-list-item'>
                 <figure class='playlist-cover'>
-                    <img src="${cover}" alt="">
+                    <img src="${playlist.img}" alt="">
 
                     <div class='playlist-option-buttons'>
                         <div class='playlist-play'>
@@ -46,14 +46,52 @@ function createPlaylist(playlists){
                     </div>
 
                     <figcaption class='playlist-infos'>
-                        <a href="#" class='playlist-name'>${name}</a>
-                        <span class='playlist-access-specifier'>${type}</span>
+                        <a href="#" class='playlist-name'>${playlist.name}</a>
+                        <span class='playlist-access-specifier'>${playlist.type}</span>
                     </figcaption>
                 </figure>
             </li>`
 
-            playlistList.innerHTML += newPlaylist
-
-        }
-    }
+        playlistList.innerHTML += newPlaylist
+    })
 }
+
+function showCloseSearchButton(){
+    let button = document.getElementById("playlist-search-clear")
+
+    button.style.display = "flex"
+}
+
+async function clearSearch(){
+    let button = document.getElementById("playlist-search-clear")
+    let inputField = document.getElementById("playlist-search")
+
+    inputField.value = ""
+    inputField.placeholder = "Buscar"
+    button.style.display = "none"
+
+    loadPlaylists()
+}
+
+
+async function searchPlaylists(){
+
+    let playlists = await getPlaylists()
+
+    let inputField = document.getElementById("playlist-search")
+    inputField.addEventListener('keyup', (event)=>{
+        console.log('oi')
+        if(event.keyCode === 13){
+            let filter = inputField.value.toLowerCase() 
+
+            playlists.forEach(playlist =>{
+                if(playlist.name.toLowerCase() == filter){
+                    let filteredPlaylist = [playlist]
+                    createPlaylist(filteredPlaylist)
+                }
+            })
+        }
+    })
+}
+
+searchPlaylists()
